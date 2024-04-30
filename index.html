@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>IMDb</title>
+    <link rel="shortcut icon" href="imgs/bigLogo.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
-    <header>
+    <header >
       <div class="container">
         <div class="logo">
           <img src="imgs/logo.svg" alt="" />
@@ -21,19 +23,300 @@
           </div>
         </div>
 
-        <div class="verNavBar" id="navBar" >
+        <div class="verNavBar" id="navBar">
           <a href="">Films</a>
           <a href="">Genres</a>
-          <a href="">WatchList</a>
+          <a onclick="watchListOpenClose()" id="watchListBtn">WatchList</a>
+        </div>
+      </div>
+      <div
+        class="watchList"
+        id="watchList"
+        style="visibility: hidden; right: -250px"
+      >
+        <div class="list" id="list">
+          <div class="watchListTitle"><h1>Watch List</h1></div>
+          <div class="added">
+            <div class="foto"><img src="imgs/fallout.jpg" alt="" /></div>
+            <div class="about">
+              <div class="name">Fallout</div>
+              <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+              <div class="buttons">
+                <div class="deleteBtn">REMOVE</div>
+              </div>
+            </div>
+          </div>
+          <div class="added">
+            <div class="foto"><img src="imgs/fallout.jpg" alt="" /></div>
+            <div class="about">
+              <div class="name">Fallout</div>
+              <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+              <div class="buttons">
+                <div class="deleteBtn">REMOVE</div>
+              </div>
+            </div>
+          </div>
+          <div class="added">
+            <div class="foto"><img src="imgs/fallout.jpg" alt="" /></div>
+            <div class="about">
+              <div class="name">Fallout</div>
+              <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+              <div class="buttons">
+                <div class="deleteBtn">REMOVE</div>
+              </div>
+            </div>
+          </div>
+          <div class="added">
+            <div class="foto"><img src="imgs/fallout.jpg" alt="" /></div>
+            <div class="about">
+              <div class="name">Fallout</div>
+              <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+              <div class="buttons">
+                <div class="deleteBtn">REMOVE</div>
+              </div>
+            </div>
+          </div>
+          <div class="added">
+            <div class="foto"><img src="imgs/fallout.jpg" alt="" /></div>
+            <div class="about">
+              <div class="name">Fallout</div>
+              <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+              <div class="buttons">
+                <div class="deleteBtn">REMOVE</div>
+              </div>
+            </div>
+          </div>
+          <div class="added">
+            <div class="foto"><img src="imgs/fallout.jpg" alt="" /></div>
+            <div class="about">
+              <div class="name">Fallout</div>
+              <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+              <div class="buttons">
+                <div class="deleteBtn">REMOVE</div>
+              </div>
+            </div>
+          </div>
+          <div class="added">
+            <div class="foto"><img src="imgs/fallout.jpg" alt="" /></div>
+            <div class="about">
+              <div class="name">Fallout</div>
+              <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+              <div class="buttons">
+                <div class="deleteBtn">REMOVE</div>
+              </div>
+            </div>
+          </div>
+          <div class="added">
+            <div class="foto"><img src="imgs/fallout.jpg" alt="" /></div>
+            <div class="about">
+              <div class="name">Fallout</div>
+              <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+              <div class="buttons">
+                <div class="deleteBtn">REMOVE</div>
+              </div>
+            </div>
+          </div>
+          <div class="added">
+            <div class="foto"><img src="imgs/fallout.jpg" alt="" /></div>
+            <div class="about">
+              <div class="name">Fallout</div>
+              <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+              <div class="buttons">
+                <div class="deleteBtn">REMOVE</div>
+              </div>
+            </div>
+          </div>
+          <div class="added">
+            <div class="foto"><img src="imgs/fallout.jpg" alt="" /></div>
+            <div class="about">
+              <div class="name">Fallout</div>
+              <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+              <div class="buttons">
+                <div class="deleteBtn">REMOVE</div>
+              </div>
+            </div>
+          </div>
+          <div class="added">
+            <div class="foto"><img src="imgs/fallout.jpg" alt="" /></div>
+            <div class="about">
+              <div class="name">Fallout</div>
+              <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+              <div class="buttons">
+                <div class="deleteBtn">REMOVE</div>
+              </div>
+            </div>
+          </div>
+          <div class="added">
+            <div class="foto"><img src="imgs/fallout.jpg" alt="" /></div>
+            <div class="about">
+              <div class="name">Fallout</div>
+              <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+              <div class="buttons">
+                <div class="deleteBtn">REMOVE</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="watchListClose" onclick="watchListOpenClose()">
+          <i class="fa-solid fa-circle-xmark"></i>
         </div>
       </div>
     </header>
     <main>
-      <div class="films">
+      <h1 >Films</h1>
+      <div class="films" id="films" >
+       
+        
         <div class="film">
-          <div class="photo"></div>
-          <div class="imdb"></div>
-          <div class="name"></div>
+          
+          <div class="bookMark">
+            <i class="fa-solid fa-plus"></i>
+            <div class="layer1"></div>
+            <div class="layer2"></div>
+          </div>
+          <div class="photo"><img src="imgs/fallout.jpg" alt="" /></div>
+          <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+          <div class="name">Fallout</div>
+        </div>
+        <div class="film">
+          <div class="bookMark">
+            <i class="fa-solid fa-plus"></i>
+            <div class="layer1"></div>
+            <div class="layer2"></div>
+          </div>
+          <div class="photo"><img src="imgs/fallout.jpg" alt="" /></div>
+          <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+          <div class="name">Fallout</div>
+        </div>
+        <div class="film">
+          <div class="bookMark">
+            <i class="fa-solid fa-plus"></i>
+            <div class="layer1"></div>
+            <div class="layer2"></div>
+          </div>
+          <div class="photo"><img src="imgs/fallout.jpg" alt="" /></div>
+          <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+          <div class="name">Fallout</div>
+        </div>
+        <div class="film">
+          <div class="bookMark">
+            <i class="fa-solid fa-plus"></i>
+            <div class="layer1"></div>
+            <div class="layer2"></div>
+          </div>
+          <div class="photo"><img src="imgs/fallout.jpg" alt="" /></div>
+          <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+          <div class="name">Fallout</div>
+        </div>
+        <div class="film">
+          <div class="bookMark">
+            <i class="fa-solid fa-plus"></i>
+            <div class="layer1"></div>
+            <div class="layer2"></div>
+          </div>
+          <div class="photo"><img src="imgs/fallout.jpg" alt="" /></div>
+          <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+          <div class="name">Fallout</div>
+        </div>
+        <div class="film">
+          <div class="bookMark">
+            <i class="fa-solid fa-plus"></i>
+            <div class="layer1"></div>
+            <div class="layer2"></div>
+          </div>
+          <div class="photo"><img src="imgs/fallout.jpg" alt="" /></div>
+          <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+          <div class="name">Fallout</div>
+        </div>
+        <div class="film">
+          <div class="bookMark">
+            <i class="fa-solid fa-plus"></i>
+            <div class="layer1"></div>
+            <div class="layer2"></div>
+          </div>
+          <div class="photo"><img src="imgs/fallout.jpg" alt="" /></div>
+          <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+          <div class="name">Fallout</div>
+        </div>
+        <div class="film">
+          <div class="bookMark">
+            <i class="fa-solid fa-plus"></i>
+            <div class="layer1"></div>
+            <div class="layer2"></div>
+          </div>
+          <div class="photo"><img src="imgs/fallout.jpg" alt="" /></div>
+          <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+          <div class="name">Fallout</div>
+        </div>
+        <div class="film">
+          <div class="bookMark">
+            <i class="fa-solid fa-plus"></i>
+            <div class="layer1"></div>
+            <div class="layer2"></div>
+          </div>
+          <div class="photo"><img src="imgs/fallout.jpg" alt="" /></div>
+          <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+          <div class="name">Fallout</div>
+        </div>
+        <div class="film">
+          <div class="bookMark">
+            <i class="fa-solid fa-plus"></i>
+            <div class="layer1"></div>
+            <div class="layer2"></div>
+          </div>
+          <div class="photo"><img src="imgs/fallout.jpg" alt="" /></div>
+          <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+          <div class="name">Fallout</div>
+        </div>
+        <div class="film">
+          <div class="bookMark">
+            <i class="fa-solid fa-plus"></i>
+            <div class="layer1"></div>
+            <div class="layer2"></div>
+          </div>
+          <div class="photo"><img src="imgs/fallout.jpg" alt="" /></div>
+          <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+          <div class="name">Fallout</div>
+        </div>
+        <div class="film">
+          <div class="bookMark">
+            <i class="fa-solid fa-plus"></i>
+            <div class="layer1"></div>
+            <div class="layer2"></div>
+          </div>
+          <div class="photo"><img src="imgs/fallout.jpg" alt="" /></div>
+          <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+          <div class="name">Fallout</div>
+        </div>
+        <div class="film">
+          <div class="bookMark">
+            <i class="fa-solid fa-plus"></i>
+            <div class="layer1"></div>
+            <div class="layer2"></div>
+          </div>
+          <div class="photo"><img src="imgs/fallout.jpg" alt="" /></div>
+          <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+          <div class="name">Fallout</div>
+        </div>
+        <div class="film">
+          <div class="bookMark">
+            <i class="fa-solid fa-plus"></i>
+            <div class="layer1"></div>
+            <div class="layer2"></div>
+          </div>
+          <div class="photo"><img src="imgs/fallout.jpg" alt="" /></div>
+          <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+          <div class="name">Fallout</div>
+        </div>
+        <div class="film">
+          <div class="bookMark">
+            <i class="fa-solid fa-plus"></i>
+            <div class="layer1"></div>
+            <div class="layer2"></div>
+          </div>
+          <div class="photo"><img src="imgs/fallout.jpg" alt="" /></div>
+          <div class="imdb"><i class="fa-solid fa-star"></i>8.1</div>
+          <div class="name">Fallout</div>
         </div>
       </div>
     </main>
@@ -42,5 +325,6 @@
       crossorigin="anonymous"
     ></script>
 
+    <script src="js/test.js"></script>
   </body>
 </html>
