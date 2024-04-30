@@ -11,7 +11,7 @@ let films = [
   },
 ];
 
-localStorage.setItem("Films" , JSON.stringify(films))
+localStorage.setItem("Films", JSON.stringify(films));
 function watchListOpenClose() {
   const watchListBtn = document.getElementById("watchListBtn");
   const watchList = document.getElementById("watchList");
@@ -32,7 +32,6 @@ function watchListOpenClose() {
     } else {
       right -= 10;
       watchList.style.right = right + "px";
-      console.log(right);
     }
   }
   function watchListOpenAnimation() {
@@ -72,11 +71,9 @@ function watchListAdd(filmID) {
   let watchList = JSON.parse(localStorage.getItem("watchList") || "[]");
   watchList.push(filmID);
   localStorage.setItem("watchList", JSON.stringify(watchList));
-  console.log(watchList);
   filmsRender();
 }
 function watchListRemove(filmID) {
-  console.log("dd")
   let watchList = JSON.parse(localStorage.getItem("watchList") || "[]");
   let newList = [];
   for (let i = 0; i < watchList.length; i++) {
@@ -94,21 +91,24 @@ function watchListRender() {
   let watchList = document.getElementById("list");
   let newWatchList = "<div class='watchListTitle'><h1>Watch List</h1></div>";
 
-  for (let i = 0; i < films.length; i++) {
-    newWatchList += ` <div class="added">
+  for (let i = 0; i < localWatchList.length; i++) {
+    for (let a = 0; a < films.length; a++) {
+      newWatchList += ` <div class="added">
     <div class="foto"><img src="imgs/fallout.jpg" alt="" /></div>
     <div class="about">
-      <div class="name">${films[i].title}</div>
-      <div class="imdb"><i class="fa-solid fa-star"></i>${films[i].imdb}</div>
+      <div class="name">${films[a].title}</div>
+      <div class="imdb"><i class="fa-solid fa-star"></i>${films[a].imdb}</div>
       <div class="buttons">
-        <div class="deleteBtn" onclick="watchListRemove(${films[i].id})">REMOVE</div>
+        <div class="deleteBtn" onclick="watchListRemove(${films[a].id})">REMOVE</div>
       </div>
     </div>
   </div>`;
+    }
   }
+  
 
-  watchList.innerHTML = newWatchList
+  watchList.innerHTML = newWatchList;
 }
 watchListRender();
 filmsRender();
-watchListRender()
+watchListRender();

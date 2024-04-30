@@ -43,3 +43,11 @@
     grid-template-columns: 170px 170px !important;
   }
 }
+
+
+@media (max-width: 440px) {
+ 
+  .films {
+    grid-template-columns: 200px  !important;
+  }
+}
