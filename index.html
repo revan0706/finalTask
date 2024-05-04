@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
-    <header >
+    <header>
       <div class="container">
         <div class="logo">
           <img src="imgs/logo.svg" alt="" />
@@ -36,6 +36,7 @@
       >
         <div class="list" id="list">
           <div class="watchListTitle"><h1>Watch List</h1></div>
+
           <div class="added">
             <div class="foto"><img src="imgs/fallout.jpg" alt="" /></div>
             <div class="about">
@@ -163,12 +164,24 @@
       </div>
     </header>
     <main>
-      <h1 >Films</h1>
-      <div class="films" id="films" >
+      <div
+        class="createFilmForm"
+        id="createFilmForm"
+        style="visibility: hidden"
+      >
        
-        
+        <div id="exitCreateFilmForm" onclick="showcreateFilmForm()">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+        <form action="">
+          <input type="text" name="" id="filmTitle" placeholder="Title" />
+          <input type="text" name="" id="filmIMDB" placeholder="IMBb" />
+          <input type="text" name="" id="filmPoster" placeholder="Poster" />
+        </form>
+      </div>
+      <h1>Films</h1>
+      <div class="films" id="films">
         <div class="film">
-          
           <div class="bookMark">
             <i class="fa-solid fa-plus"></i>
             <div class="layer1"></div>

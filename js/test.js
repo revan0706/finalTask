@@ -48,7 +48,7 @@ function watchListOpenClose() {
 function filmsRender() {
   let films = JSON.parse(localStorage.getItem("Films"));
   let watchList = JSON.parse(localStorage.getItem("watchList") || "[]");
-  let x = "";
+  let x = `<div class="createFilm" onclick="showcreateFilmForm()"><i class="fa-solid fa-plus"></i></div>`;
   for (let i = 0; i < films.length; i++) {
     x += `<div class="film">
   
@@ -72,6 +72,7 @@ function watchListAdd(filmID) {
   watchList.push(filmID);
   localStorage.setItem("watchList", JSON.stringify(watchList));
   filmsRender();
+  watchListRender();
 }
 function watchListRemove(filmID) {
   let watchList = JSON.parse(localStorage.getItem("watchList") || "[]");
@@ -83,6 +84,7 @@ function watchListRemove(filmID) {
   }
   localStorage.setItem("watchList", JSON.stringify(newList));
   filmsRender();
+  watchListRender();
 }
 
 function watchListRender() {
@@ -105,10 +107,38 @@ function watchListRender() {
   </div>`;
     }
   }
-  
 
   watchList.innerHTML = newWatchList;
+}
+
+function showcreateFilmForm() {
+  let createFilmForm = document.getElementById("createFilmForm");
+  createFilmForm.style.visibility == "hidden"
+    ? (createFilmForm.style.visibility = "visible")
+    : (createFilmForm.style.visibility = "hidden");
+}
+
+function createFilm() {
+  let films = JSON.parse(localStorage.getItem("Films"));
+  let filmTitle = document.getElementById("filmTitle");
+  let filmIMDB = document.getElementById("filmIMDB");
+  let filmPoster = document.getElementById("filmPoster");
+  let maxID = 0;
+  for (let i = 0; i < films.length; i++) {
+    if (films[i].id > maxID) {
+      maxID = films[i].id;
+    }
+  }
+
+  let film = {
+    id: maxID,
+    title: filmTitle.value,
+    poster: filmPoster.value,
+    IMDb: filmIMDB.value,
+  };
+  console.log(film);
 }
 watchListRender();
 filmsRender();
 watchListRender();
+// https://m.media-amazon.com/images/I/51E+o6036kL.AC_UF894,1000_QL80_DpWeblab.jpg
