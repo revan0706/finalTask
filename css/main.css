@@ -23,9 +23,16 @@ main {
       background-color: aqua;
       background-color: rgb(37, 36, 36);
 
-      i {
-        font-size: 62px;
-        color: white;
+      a {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+          font-size: 62px;
+          color: white;
+        }
       }
     }
     .film {
@@ -92,48 +99,6 @@ main {
       .name {
         margin-left: 6px;
         padding-bottom: 6px;
-      }
-    }
-  }
-  .createFilmForm {
-    position: fixed;
-    width: 700px;
-    height: 400px;
-    background-color: transparent;
-    backdrop-filter: blur(32px);
-    z-index: 20;
-    left: 50%;
-    right: 50%;
-    top: 50%;
-    bottom: 50%;
-    transform: translate(-50%, -50%);
-
-    #exitCreateFilmForm {
-      position: absolute;
-      right: 0px;
-      font-size: 18px;
-      padding: 5px;
-      color: white;
-    }
-    form {
-      display: flex;
-      height: 100%;
-      justify-content: center;
-      gap: 16px;
-      align-content: center;
-      flex-wrap: wrap;
-      input {
-        border: 0px;
-        background-color: transparent;
-        border-bottom: 1px solid black;
-        color: white;
-        &::placeholder {
-          color: white;
-        }
-        &:focus-visible {
-          outline: none;
-          color: white;
-        }
       }
     }
   }
