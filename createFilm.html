@@ -10,23 +10,55 @@
     <link rel="stylesheet" href="css/createfilm.css" />
   </head>
   <body>
-    <h1>Create Film</h1>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="imgs/logo.svg" alt="" />
+        </div>
+
+        <div class="searchInput">
+          <input type="text" name="" id="" placeholder="Search IMDb" />
+          <div class="searchBtn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+
+        <div class="verNavBar" id="navBar">
+          <a href="films.html">Films</a>
+          <a href="actors.html">Actors</a>
+          <a onclick="watchListOpenClose()" id="watchListBtn">WatchList</a>
+        </div>
+      </div>
+      <div
+        class="watchList"
+        id="watchList"
+        style="visibility: hidden; right: -250px"
+      >
+        <div class="list" id="list"></div>
+        <div class="watchListClose" onclick="watchListOpenClose()">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+      </div>
+    </header>
     <div class="createFilm">
+      <h1>Create Film</h1>
       <form action="">
         <input type="text" name="" id="title" placeholder="Title" />
         <input type="text" name="" id="imdb" placeholder="IMDb" />
-        <input type="text" name="" id="poster" placeholder="Poster" />
-        <input type="text" name="" id="src" placeholder="Src" />
-        <input type="text" name="" id="year" placeholder="Year" />
-        <input type="text" name="" id="duration" placeholder="Duration" />
+        <input type="text" name="" id="poster" placeholder="Poster (url)" />
+        <input type="text" name="" id="src" placeholder="Src (url)"  />
+        <input type="date" name="" id="year" placeholder="Year" />
+        <input type="text" name="" id="duration" placeholder="Duration (minute)" />
         <input type="text" name="" id="genres" placeholder="Genres" />
         <input type="text" name="" id="director" placeholder="Director" />
         <input type="text" name="" id="writer" placeholder="Writer" />
         <input type="text" name="" id="language" placeholder="Language" />
         <input type="text" name="" id="plot" placeholder="Plot" />
       </form>
-      <input type="submit" value="add" onclick="createFilm()" />
+      <input type="submit" value="Create Film" onclick="createFilm()" />
     </div>
+
+    <script src="js/watchlist.js"></script>
     <script src="js/createfilm.js"></script>
     <script
       src="https://kit.fontawesome.com/c5f8229f0d.js"

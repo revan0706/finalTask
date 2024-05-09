@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Directors</title>
+    <title>IMDb</title>
     <link rel="shortcut icon" href="imgs/bigLogo.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/films.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/directors.css" />
   </head>
   <body>
     <header>
@@ -25,7 +25,7 @@
 
         <div class="verNavBar" id="navBar">
           <a>Films</a>
-          <a href="directors.html">Directors</a>
+          <a href="actors.html">Actors</a>
           <a onclick="watchListOpenClose()" id="watchListBtn">WatchList</a>
         </div>
       </div>
@@ -40,17 +40,15 @@
         </div>
       </div>
     </header>
-
+    <main>
+      <div class="films" id="films"></div>
+    </main>
+    <script src="js/films.js"></script>
+    <script src="js/createfilm.js"></script>
     <script src="js/watchlist.js"></script>
     <script
       src="https://kit.fontawesome.com/c5f8229f0d.js"
       crossorigin="anonymous"
     ></script>
   </body>
-  <main>
-    <h1>Directors</h1>
-    <div class="directors">
-      <div class="director"></div>
-    </div>
-  </main>
 </html>

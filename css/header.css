@@ -87,13 +87,15 @@ body {
       height: 100vh;
       right: -250px;
       width: 250px;
-      padding: 12px 14px;
       display: flex;
       background-color: black;
       flex-direction: column;
       color: white;
-
+      background: url(https://t3.ftcdn.net/jpg/01/15/03/38/360_F_115033825_CmHuh01QvB7T8btaOv0MK0WaKLZavdXx.jpg);
+      background-size: 100% 100%;
+      
       .list {
+        padding: 12px 14px;
         width: 100%;
         height: 100%;
         display: flex;
@@ -101,6 +103,7 @@ body {
         flex-wrap: wrap;
         overflow: auto;
         align-content: flex-start;
+        backdrop-filter: blur(26px);
         .watchListTitle {
           width: 100%;
           

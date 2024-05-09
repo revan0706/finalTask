@@ -47,7 +47,7 @@ function watchListRemove(filmID) {
     }
   }
   localStorage.setItem("watchList", JSON.stringify(newList));
-  filmsRender();
+  
   watchListRender();
 }
 

@@ -1,18 +1,3 @@
-// let films = [
-//   {
-//     id: 1,
-//     imdb: 9.2,
-//     title: "Fallout",
-//   },
-//   {
-//     id: 2,
-//     imdb: 3.2,
-//     title: "out",
-//   },
-// ];
-
-// localStorage.setItem("Films", JSON.stringify(films));
-
 function filmsRender() {
   let films = JSON.parse(localStorage.getItem("Films"));
   let watchList = JSON.parse(localStorage.getItem("watchList") || "[]");
@@ -31,9 +16,10 @@ function filmsRender() {
       <div class="imdb"><i class="fa-solid fa-star"></i>${films[i].IMDb}</div>
       <div class="name">${films[i].title}</div>
     </div>`;
-    console.log(films[i].title);
+    console.log(films[i].id);
   }
   document.getElementById("films").innerHTML = x;
+  
 }
 
 filmsRender();

@@ -18,11 +18,18 @@
   .films {
     grid-template-columns: 150px 150px 150px 150px !important;
   }
+  .actorList {
+    grid-template-columns: auto auto auto auto auto auto !important ;
+  }
 }
 
 @media (max-width: 768px) {
   .container {
     width: 540px !important;
+  }
+
+  .actorList {
+    grid-template-columns: auto auto auto auto auto !important ;
   }
 
   .films {
@@ -33,6 +40,9 @@
   .films {
     grid-template-columns: 145px 145px 145px !important;
   }
+  .actorList {
+    grid-template-columns: auto auto auto auto !important ;
+  }
 }
 @media (max-width: 576px) {
   .container {
@@ -42,12 +52,29 @@
   .films {
     grid-template-columns: 170px 170px !important;
   }
+  
+  .actor {
+    width: 94px !important;
+    .foto {
+      width: 94px !important;
+
+      img {
+        height: 98px !important;
+      }
+    }
+  }
+}
+@media (max-width: 440px) {
+  .actorList {
+    grid-template-columns: auto auto auto  !important ;
+  }
+  .films {
+    grid-template-columns: 200px !important;
+  }
 }
 
-
-@media (max-width: 440px) {
- 
-  .films {
-    grid-template-columns: 200px  !important;
+@media (max-width: 340px) {
+  .actorList {
+    grid-template-columns:  auto auto  !important ;
   }
 }

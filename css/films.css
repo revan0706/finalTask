@@ -2,26 +2,32 @@ main {
   background-color: black;
   width: 100%;
   height: auto;
-  padding: 83.13px 32px;
+  padding: 58.13px 0px 0px 0px;
+  background: url(https://t3.ftcdn.net/jpg/01/15/03/38/360_F_115033825_CmHuh01QvB7T8btaOv0MK0WaKLZavdXx.jpg);
+  background-size: 100% 100%;
+  object-fit: cover;
   h1 {
     margin: 0px;
     color: white;
     margin-bottom: 12px;
     padding-left: 26px;
+    backdrop-filter: blur(40px);
   }
   .films {
     display: grid;
     grid-template-columns: 145px 145px 145px 145px 145px;
     gap: 24px;
+    backdrop-filter: blur(20px);
 
     justify-content: center;
-    padding: 12px 36px;
+    padding: 32px;
     .createFilm {
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: aqua;
       background-color: rgb(37, 36, 36);
+      height: 281.84px;
 
       a {
         height: 100%;
@@ -29,6 +35,7 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
+        text-decoration: none;
         i {
           font-size: 62px;
           color: white;
@@ -77,6 +84,7 @@ main {
           border-bottom: 7px solid transparent;
         }
       }
+
       .photo {
         height: 220px;
         background-color: gray;
