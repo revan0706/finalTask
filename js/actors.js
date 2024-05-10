@@ -46,7 +46,7 @@ let a = [
 localStorage.setItem("Actors", JSON.stringify(a));
 
 function actorsRender() {
-  let actors = JSON.parse(localStorage.getItem("Actors"));
+  let actors = JSON.parse(localStorage.getItem("Actors") || "[]");
   let actorsList = document.getElementById("actorList");
   let newActorList = "";
 
