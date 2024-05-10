@@ -13,6 +13,7 @@ body {
   background-size: 100% 100%;
   object-fit: cover;
   color: #f1f1f1;
+  min-height: 100vh;
   header {
     position: fixed;
     top: 0px;
@@ -21,8 +22,8 @@ body {
     position: absolute;
     top: 61.87px;
     width: 100%;
-    height: 100%;
     display: grid;
+    align-items: flex-start;
     flex-direction: column;
     justify-items: center;
     align-content: center;

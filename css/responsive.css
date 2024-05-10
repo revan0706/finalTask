@@ -35,6 +35,12 @@
   .films {
     grid-template-columns: 160px 160px 160px !important;
   }
+
+  .createFilm {
+    form {
+      grid-template-columns: 250px 250px !important;
+    }
+  }
 }
 @media (max-width: 640px) {
   .films {
@@ -42,6 +48,13 @@
   }
   .actorList {
     grid-template-columns: auto auto auto auto !important ;
+  }
+
+  .createFilm {
+    form {
+      grid-template-columns: 272px !important;
+      gap: 60px;
+    }
   }
 }
 @media (max-width: 576px) {
@@ -52,7 +65,7 @@
   .films {
     grid-template-columns: 170px 170px !important;
   }
-  
+
   .actor {
     width: 94px !important;
     .foto {
@@ -66,7 +79,7 @@
 }
 @media (max-width: 440px) {
   .actorList {
-    grid-template-columns: auto auto auto  !important ;
+    grid-template-columns: auto auto auto !important ;
   }
   .films {
     grid-template-columns: 200px !important;
@@ -75,6 +88,6 @@
 
 @media (max-width: 340px) {
   .actorList {
-    grid-template-columns:  auto auto  !important ;
+    grid-template-columns: auto auto !important ;
   }
 }
