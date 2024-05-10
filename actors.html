@@ -13,7 +13,7 @@
     <header>
       <div class="container">
         <div class="logo">
-          <img src="imgs/logo.svg" alt="" />
+          <a href="films.html"> <img src="imgs/logo.svg" alt="" /></a>
         </div>
 
         <div class="searchInput">
@@ -41,13 +41,29 @@
       </div>
     </header>
 
-    <script src="js/watchlist.js"></script>
     <main>
+      <div class="createActors">
+        <h1>Create Actor</h1>
+        <form action="">
+          <input type="text" name="" id="actorsName" placeholder="Actor Name" />
+          <input
+            type="text"
+            name=""
+            id="actorSurname"
+            placeholder="Actor Surname"
+          />
+          <input
+            type="url"
+            name=""
+            id="ActorsImg"
+            placeholder="Actor Photo (URL)"
+          />
+        </form>
+        <input type="submit" value="Create Actor" />
+      </div>
       <div class="actors">
         <h1>Actors</h1>
-        <div class="actorList" id="actorList">
-          
-        </div>
+        <div class="actorList" id="actorList"></div>
       </div>
     </main>
 
@@ -56,5 +72,6 @@
       src="https://kit.fontawesome.com/c5f8229f0d.js"
       crossorigin="anonymous"
     ></script>
+    <script src="js/watchlist.js"></script>
   </body>
 </html>

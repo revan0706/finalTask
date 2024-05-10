@@ -13,7 +13,7 @@
     <header>
       <div class="container">
         <div class="logo">
-          <img src="imgs/logo.svg" alt="" />
+          <a href="films.html"> <img src="imgs/logo.svg" alt="" /></a>
         </div>
 
         <div class="searchInput">
@@ -44,16 +44,24 @@
       <h1>Create Film</h1>
       <form action="">
         <input type="text" name="" id="title" placeholder="Title" />
-        <input type="text" name="" id="imdb" placeholder="IMDb" />
-        <input type="text" name="" id="poster" placeholder="Poster (url)" />
-        <input type="text" name="" id="src" placeholder="Src (url)"  />
+        <input type="number" name="" id="imdb" placeholder="IMDb" />
+        <input type="url" name="" id="poster" placeholder="Poster (url)" />
+        <input type="url" name="" id="src" placeholder="Src (url)" />
         <input type="date" name="" id="year" placeholder="Year" />
-        <input type="text" name="" id="duration" placeholder="Duration (minute)" />
+        <input
+          type="number"
+          name=""
+          id="duration"
+          placeholder="Duration (minute)"
+        />
         <input type="text" name="" id="genres" placeholder="Genres" />
         <input type="text" name="" id="director" placeholder="Director" />
         <input type="text" name="" id="writer" placeholder="Writer" />
         <input type="text" name="" id="language" placeholder="Language" />
         <input type="text" name="" id="plot" placeholder="Plot" />
+        <select name="" id="actors">
+          <!-- <option value="">v</option> -->
+        </select>
       </form>
       <input type="submit" value="Create Film" onclick="createFilm()" />
     </div>

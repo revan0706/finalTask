@@ -9,7 +9,7 @@ function watchListOpenClose() {
     let open = setInterval(watchListOpenAnimation, 15);
   } else {
     let close = setInterval(watchListCloseAnimation, 15);
-    setTimeout(() => (watchList.style.visibility = "hidden"), 450);
+    setTimeout(() => (watchList.style.visibility = "hidden"), 375);
   }
   function watchListCloseAnimation() {
     const watchList = document.getElementById("watchList");
@@ -22,7 +22,7 @@ function watchListOpenClose() {
   }
   function watchListOpenAnimation() {
     const watchList = document.getElementById("watchList");
-    if (right == 0) {
+    if (right == 20) {
       clearInterval(open);
     } else {
       right += 10;
@@ -47,7 +47,7 @@ function watchListRemove(filmID) {
     }
   }
   localStorage.setItem("watchList", JSON.stringify(newList));
-  
+  filmsRender();
   watchListRender();
 }
 

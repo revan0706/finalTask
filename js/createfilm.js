@@ -1,16 +1,3 @@
-// let films = [
-//   {
-//     id: 1,
-//     imdb: 9.2,
-//     title: "Fallout",
-//   },
-//   {
-//     id: 2,
-//     imdb: 3.2,
-//     title: "out",
-//   },
-// ];
-// localStorage.setItem("Films", JSON.stringify(films));
 function showcreateFilmForm() {
   let createFilmForm = document.getElementById("createFilmForm");
   createFilmForm.style.visibility == "hidden"
@@ -53,6 +40,20 @@ function createFilm() {
     plot: filmPlot,
   };
   films.push(film);
-  // console.log(film);
+
   localStorage.setItem("Films", JSON.stringify(films));
 }
+
+function formActorsRender() {
+  let actors = JSON.parse(localStorage.getItem("Actors"));
+  let formActors = document.getElementById("actors");
+  let actorList = "";
+
+  for (let i = 0; i < actors.length; i++) {
+    actorList += `<option value="">${actors[i].actorsName}</option>`;
+  }
+
+  formActors.innerHTML = actorList;
+}
+
+formActorsRender();
