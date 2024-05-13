@@ -13,7 +13,7 @@
     <header>
       <div class="container">
         <div class="logo">
-          <a href="films.html"> <img src="imgs/logo.svg" alt="" /></a>
+          <a href="films.html" style="cursor: pointer;"> <img src="imgs/logo.svg" alt="" /></a>
         </div>
 
         <div class="searchInput">
@@ -25,8 +25,7 @@
 
         <div class="verNavBar" id="navBar">
           <a href="films.html">Films</a>
-          <a href="actors.html">actors</a>
-          <a onclick="watchListOpenClose()" id="watchListBtn">WatchList</a>
+          <a onclick="watchListOpenClose()" id="watchListBtn">Watchlist</a>
         </div>
       </div>
       <div
@@ -43,26 +42,26 @@
 
     <main>
       <div class="createActors">
-        <h1>Create Actor</h1>
         <form action="">
+          <h1>Create Actor</h1>
           <input type="text" name="" id="actorsName" placeholder="Actor Name" />
           <input
             type="text"
             name=""
-            id="actorSurname"
+            id="actorsSurname"
             placeholder="Actor Surname"
           />
           <input
             type="url"
             name=""
-            id="ActorsImg"
+            id="actorsImg"
             placeholder="Actor Photo (URL)"
           />
+          <input type="submit" value="Create Actor"  onclick="creatActors()"/>
         </form>
-        <input type="submit" value="Create Actor" />
       </div>
       <div class="actors">
-        <h1>Actors</h1>
+        <div class="actorListTitle"><h1>Actors</h1></div>
         <div class="actorList" id="actorList"></div>
       </div>
     </main>

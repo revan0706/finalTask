@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 @media (max-width: 1400px) {
   .container {
     width: 1140px !important;
@@ -7,6 +11,9 @@
 @media (max-width: 1200px) {
   .container {
     width: 960px !important;
+  }
+  .actorList {
+    grid-template-columns: auto auto auto auto auto !important ;
   }
 }
 
@@ -19,7 +26,41 @@
     grid-template-columns: 150px 150px 150px 150px !important;
   }
   .actorList {
-    grid-template-columns: auto auto auto auto auto auto !important ;
+    grid-template-columns: auto auto auto auto !important ;
+
+    .actor {
+      width: 162px !important;
+      .foto {
+        width: 162px !important;
+        img {
+          height: 162px !important;
+        }
+      }
+    }
+  }
+
+  .filmDetails {
+    .headSection {
+      width: 600px !important;
+    }
+    .middleSection {
+      .filmPortre {
+        width: 160px !important;
+      }
+      .filmTrailer {
+        width: 440px !important;
+        height: 260px !important;
+      }
+    }
+
+    .bottomSection {
+      width: 600px !important;
+      .filmAbout {
+        .about {
+          width: 500px !important;
+        }
+      }
+    }
   }
 }
 
@@ -29,7 +70,16 @@
   }
 
   .actorList {
-    grid-template-columns: auto auto auto auto auto !important ;
+    grid-template-columns: auto auto auto !important ;
+    .actor {
+      width: 152px !important;
+      .foto {
+        width: 152px !important;
+        img {
+          height: 152px !important;
+        }
+      }
+    }
   }
 
   .films {
@@ -41,19 +91,97 @@
       grid-template-columns: 250px 250px !important;
     }
   }
+  .createActors {
+    form {
+      input {
+        width: 350px !important;
+      }
+    }
+  }
+
+  .filmDetails {
+    .headSection {
+      width: 485px !important;
+      font-size: 12px;
+      .firstSection {
+        h1 {
+          font-size: 33px !important;
+        }
+      }
+    }
+    .middleSection {
+      .filmPortre {
+        width: 140px !important;
+      }
+      .filmTrailer {
+        width: 340px !important;
+        height: 220px !important;
+      }
+    }
+
+    .bottomSection {
+      width: 480px !important;
+      font-size: 12px !important;
+
+      .filmAbout {
+        .about {
+          width: 400px !important;
+        }
+      }
+    }
+  }
 }
 @media (max-width: 640px) {
   .films {
     grid-template-columns: 145px 145px 145px !important;
   }
   .actorList {
-    grid-template-columns: auto auto auto auto !important ;
+    grid-template-columns: auto auto auto !important ;
   }
 
   .createFilm {
     form {
       grid-template-columns: 272px !important;
       gap: 60px;
+    }
+  }
+  .createActors {
+    form {
+      input {
+        width: 300px !important;
+      }
+    }
+  }
+
+  .filmDetails {
+    .headSection {
+      width: 485px !important;
+      font-size: 12px;
+      .firstSection {
+        h1 {
+          font-size: 33px !important;
+        }
+      }
+    }
+    .middleSection {
+      .filmPortre {
+        width: 140px !important;
+      }
+      .filmTrailer {
+        width: 340px !important;
+        height: 220px !important;
+      }
+    }
+
+    .bottomSection {
+      width: 480px !important;
+      font-size: 12px !important;
+
+      .filmAbout {
+        .about {
+          width: 400px !important;
+        }
+      }
     }
   }
 }
@@ -66,28 +194,160 @@
     grid-template-columns: 170px 170px !important;
   }
 
-  .actor {
-    width: 94px !important;
-    .foto {
-      width: 94px !important;
+  .actorList {
+    grid-template-columns: auto auto auto !important ;
+    .actor {
+      width: 120px !important;
+      .foto {
+        width: 120px !important;
 
-      img {
-        height: 98px !important;
+        img {
+          height: 120px !important;
+        }
+      }
+    }
+  }
+  .createActors {
+    form {
+      input {
+        width: 270px !important;
+      }
+    }
+  }
+
+  .filmDetails {
+    .headSection {
+      width: 380px !important;
+      font-size: 12px;
+      .firstSection {
+        h1 {
+          font-size: 30px !important;
+        }
+      }
+
+      .lastSection {
+        display: none;
+      }
+    }
+    .middleSection {
+      .filmPortre {
+        display: none !important;
+      }
+      .filmTrailer {
+        width: 380px !important;
+        height: 200px !important;
+      }
+    }
+
+    .bottomSection {
+      width: 380px !important;
+      font-size: 11px !important;
+
+      .filmAbout {
+        .about {
+          width: 400px !important;
+        }
       }
     }
   }
 }
 @media (max-width: 440px) {
   .actorList {
-    grid-template-columns: auto auto auto !important ;
+    grid-template-columns: auto auto !important ;
   }
   .films {
     grid-template-columns: 200px !important;
+  }
+  .createActors {
+    form {
+      input {
+        width: 230px !important;
+      }
+    }
+  }
+
+  .filmDetails {
+    .headSection {
+      width: 310px !important;
+      font-size: 9px;
+      .firstSection {
+        h1 {
+          font-size: 26px !important;
+        }
+      }
+
+      .lastSection {
+        display: none;
+      }
+    }
+    .middleSection {
+      .filmPortre {
+        display: none !important;
+      }
+      .filmTrailer {
+        width: 310px !important;
+        height: 160px !important;
+      }
+    }
+
+    .bottomSection {
+      width: 310px !important;
+      font-size: 9px !important;
+
+      .filmAbout {
+        .about {
+          width: 250px !important;
+        }
+      }
+    }
   }
 }
 
 @media (max-width: 340px) {
   .actorList {
-    grid-template-columns: auto auto !important ;
+    grid-template-columns: auto !important ;
+  }
+  .createActors {
+    form {
+      input {
+        width: 170px !important;
+      }
+    }
+  }
+
+  .filmDetails {
+    .headSection {
+      width: 100% !important;
+      font-size: 9px;
+      .firstSection {
+        h1 {
+          font-size: 26px !important;
+        }
+      }
+
+      .lastSection {
+        display: none;
+      }
+    }
+    .middleSection {
+      .filmPortre {
+        display: none !important;
+      }
+      .filmTrailer {
+        width: 100% !important;
+        height: 160px !important;
+      }
+    }
+
+    .bottomSection {
+      width: 100% !important;
+      font-size: 9px !important;
+
+      .filmAbout {
+        .about {
+          width: 250px !important;
+        }
+      }
+    }
   }
 }

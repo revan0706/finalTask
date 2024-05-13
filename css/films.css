@@ -64,11 +64,13 @@ main {
         justify-content: center;
         align-items: center;
         filter: opacity(70%);
+        z-index: 1;
         i {
           position: absolute;
           color: white;
           z-index: 3;
           display: block;
+          font-size: 20px;
         }
         .layer2 {
           position: absolute;
@@ -76,18 +78,18 @@ main {
           width: 0px;
 
           &.active {
-            border: 15px solid rgb(197, 197, 0);
+            border: 15px solid rgb(245, 197, 24, 1);
             border-bottom: 7px solid transparent;
             top: 0px;
           }
 
-          &.inactive{
+          &.inactive {
             border: 15px solid rgb(0, 0, 0);
             border-bottom: 7px solid transparent;
             top: 0px;
           }
         }
-        
+
         .layer1 {
           top: 2px;
           position: relative;
@@ -98,13 +100,11 @@ main {
         }
 
         &:hover > .layer2 {
-          
-          
-          &.active{
-            border: 15px solid yellow;
+          &.active {
+            border: 15px solid #dfb418;
             border-bottom: 7px solid transparent;
           }
-          &.inactive{
+          &.inactive {
             border: 15px solid rgb(77, 75, 75);
             border-bottom: 7px solid transparent;
           }
@@ -132,7 +132,7 @@ main {
       }
       .name {
         margin-left: 6px;
-        padding-bottom: 6px;
+        padding-bottom: 10px;
       }
     }
   }

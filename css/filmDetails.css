@@ -1,0 +1,129 @@
+body {
+  background: url(https://t3.ftcdn.net/jpg/01/15/03/38/360_F_115033825_CmHuh01QvB7T8btaOv0MK0WaKLZavdXx.jpg);
+  background-size: 100% 100%;
+  min-height: 100vh;
+
+  .filmDetails {
+    position: absolute;
+    top: 59.84px;
+    min-height: inherit;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    padding: 32px 0px;
+    .headSection {
+      display: flex;
+      width: 875px; /*!*/
+      justify-content: space-between;
+      color: #f1f1f1;
+      .firstSection {
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        h1 {
+          margin: 0px;
+          font-size: 42px;
+        }
+        .shortInfo {
+          gap: 5px;
+          display: flex;
+          flex-direction: row;
+        }
+      }
+
+      .lastSection {
+        .imdb {
+          display: flex;
+          gap: 5px;
+          margin: 0px;
+          i {
+            color: yellow;
+          }
+        }
+      }
+    }
+
+    .middleSection {
+      display: flex;
+      gap: 5px;
+      color: #f1f1f1;
+      .filmPortre {
+        width: 230px; /*!*/
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .filmTrailer {
+        width: 640px; /*!*/
+        height: 345px;
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .bottomSection {
+      width: 875px;
+      color: #f1f1f1;
+      .genres {
+        display: flex;
+        gap: 10px;
+        margin: 5px;
+        div {
+          padding: 4px 8px;
+          border: 1.5px solid rgba(255, 255, 255, 0.2);
+          border-radius: 12px;
+          font-size: 12px;
+        }
+      }
+
+      .filmAbout {
+        display: flex;
+        flex-direction: column;
+
+        .about {
+          width: 560px; /*!*/
+        }
+        .director {
+          display: flex;
+          flex-direction: row;
+          gap: 5px;
+          align-items: center;
+          border-top: 1px solid rgb(255, 255, 255, 0.2);
+          border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+          &::before {
+            content: "Director";
+          }
+          p {
+            color: blue;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        .writers {
+          display: flex;
+          flex-direction: row;
+          gap: 5px;
+          align-items: center;
+
+          p {
+            color: blue;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          &::before {
+            content: "writers";
+          }
+        }
+      }
+    }
+  }
+}

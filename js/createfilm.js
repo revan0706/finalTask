@@ -50,7 +50,7 @@ function formActorsRender() {
   let actorList = "";
 
   for (let i = 0; i < actors.length; i++) {
-    actorList += `<option value="">${actors[i].actorsName}</option>`;
+    actorList += `<option value="">${actors[i].actorsName} ${actors[i].actorsSurname}</option>`;
   }
 
   formActors.innerHTML = actorList;

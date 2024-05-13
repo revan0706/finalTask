@@ -29,6 +29,7 @@ body {
     align-content: center;
     gap: 10px;
     backdrop-filter: blur(40px);
+    min-height: 100vh;
     form {
       display: grid;
       grid-template-columns: 300px 300px;
@@ -52,7 +53,6 @@ body {
       margin-top: 20px;
       background-color: black;
       color: #f1f1f1;
-      /* width: 200px; */
       padding: 8px 16px;
 
       &:hover {

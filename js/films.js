@@ -19,7 +19,9 @@ function filmsRender() {
     }
      
     
-      <div class="photo"><img src="${films[i].poster}" alt="" /></div>
+      <a href="filmDetails.html#${films[i].id}"><div class="photo"><img src="${
+      films[i].poster
+    }" alt="" /></div></a>
       <div class="imdb"><i class="fa-solid fa-star"></i>${films[i].IMDb}</div>
       <div class="name">${films[i].title}</div>
     </div>`;

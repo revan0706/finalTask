@@ -13,25 +13,28 @@ body {
     background-size: 100% 100%;
     object-fit: cover;
     backdrop-filter: blur(100px);
+    min-height: 100vh;
 
     .createActors {
-      width: 100%;
       display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: center;
-      /* margin: 64px 0px 0px 0px; */
+      margin: 32px;
       gap: 36px;
       form {
+        border: 2px solid;
+        padding: 12px 16px;
         display: flex;
-        gap: 20px;
-
+        gap: 50px;
+        flex-direction: column;
+        align-items: center;
         input {
           background-color: transparent;
           border: 0px;
           border-bottom: 2px solid white;
           color: white;
-          width: 250px;
+          width: 400px;
           &::placeholder {
             color: white;
           }
@@ -45,32 +48,42 @@ body {
       input[type="submit"] {
         background-color: black;
         color: #f1f1f1;
-        padding: 4px 16px;
+        width: 118px !important;
+        padding: 8px 16px;
+        border-radius: 6px;
+        border: 0.5px solid black;
         &:hover {
-          border-color: black;
-          background-color: white;
-          color: black;
+          border: 0.5px solid white;
         }
       }
     }
     .actors {
       padding: 16px;
-      h1 {
-        margin: 0px;
-        padding-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      .actorListTitle {
+        width: 100%;
+        h1 {
+          margin: 0px;
+          padding: 0px 8px;
+          border-left: 6px solid yellow;
+          margin-bottom: 32px;
+          float: left;
+        }
       }
+
       .actorList {
         display: grid;
-        gap: 10px;
+        gap: 15px;
         grid-template-columns: auto auto auto auto auto auto;
         justify-items: center;
         .actor {
-          width: 118px;
+          width: 172px;
           .foto {
-            width: 118px;
+            width: 172px;
 
             img {
-              height: 120px;
+              height: 172px;
               width: 100%;
               border-radius: 360px;
             }
