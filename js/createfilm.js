@@ -18,6 +18,7 @@ function createFilm() {
   let filmWriter = document.getElementById("writer");
   let filmLanguage = document.getElementById("language");
   let filmPlot = document.getElementById("plot");
+  console.log(filmPlot);
   let maxID = 0;
   for (let i = 0; i < films.length; i++) {
     if (films[i].id > maxID) {
@@ -30,14 +31,14 @@ function createFilm() {
     title: filmTitle.value,
     poster: filmPoster.value,
     IMDb: filmIMDB.value,
-    src: filmSrc,
-    year: filmYear,
-    duration: filmDuration,
-    genres: filmGenres,
-    director: filmDirector,
-    writer: filmWriter,
-    language: filmLanguage,
-    plot: filmPlot,
+    src: filmSrc.value,
+    year: filmYear.value,
+    duration: filmDuration.value,
+    genres: filmGenres.value,
+    director: filmDirector.value,
+    writer: filmWriter.value,
+    language: filmLanguage.value,
+    plot: filmPlot.value,
   };
   films.push(film);
 
