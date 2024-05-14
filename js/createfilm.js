@@ -18,7 +18,7 @@ function createFilm() {
   let filmWriter = document.getElementById("writer");
   let filmLanguage = document.getElementById("language");
   let filmPlot = document.getElementById("plot");
-  console.log(filmPlot);
+  console.log(filmPlot.value);
   let maxID = 0;
   for (let i = 0; i < films.length; i++) {
     if (films[i].id > maxID) {
