@@ -13,6 +13,7 @@ body {
     z-index: 1;
     background-color: black;
     padding: 12px 16px;
+    max-height: 60px;
     .container {
       margin: auto;
       width: 1320px;
@@ -85,7 +86,8 @@ body {
 
     .watchList {
       position: absolute;
-      top: 0;
+      top: 20px;
+      bottom: 20px;
       height: 100vh;
       right: -250px;
       width: 250px;
@@ -93,7 +95,7 @@ body {
       background-color: black;
       flex-direction: column;
       color: white;
-      background: url(https://t3.ftcdn.net/jpg/01/15/03/38/360_F_115033825_CmHuh01QvB7T8btaOv0MK0WaKLZavdXx.jpg);
+      background: url(https://png.pngtree.com/background/20230611/original/pngtree-zebra-s-head-in-black-and-white-picture-image_3171431.jpg);
       background-size: 100% 100%;
 
       .list {
@@ -173,13 +175,13 @@ body {
       }
       .watchListClose {
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 10px;
+        top: 5px;
         padding: 8px;
-        background-color: black;
         margin: 12px 14px;
         color: white;
         cursor: pointer;
+        font-size: 24px;
       }
     }
   }

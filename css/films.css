@@ -8,43 +8,34 @@ main {
   width: 100%;
   height: auto;
   padding: 58.13px 0px 0px 0px;
-  background: url(https://t3.ftcdn.net/jpg/01/15/03/38/360_F_115033825_CmHuh01QvB7T8btaOv0MK0WaKLZavdXx.jpg);
+  background: url(https://cdn.cimri.io/image/240x240/muzi-mermer-siyah-fotograf-arka-plan-beyaz-ve-sari-granit-doku-fon-cocuk-dogum-gunu-partisi-fotograf-video-arka-planlari-15-x-21-m-xt-6731_750977098.jpg);
   background-size: 100% 100%;
   object-fit: cover;
   display: flex;
   min-height: 100vh;
-  h1 {
-    margin: 0px;
-    color: white;
-    margin-bottom: 12px;
-    padding-left: 26px;
-    backdrop-filter: blur(40px);
-  }
+
   .films {
     display: grid;
     flex: 1;
     align-items: flex-start;
     grid-template-columns: 145px 145px 145px 145px 145px;
     gap: 24px;
-    backdrop-filter: blur(20px);
-
+    backdrop-filter: blur(520px);
     justify-content: center;
     padding: 32px;
-    .createFilm {
+    a {
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: aqua;
-      background-color: rgb(37, 36, 36);
-      height: 281.84px;
-
-      a {
-        height: 100%;
-        width: 100%;
+      text-decoration: none;
+      .createFilm {
         display: flex;
         justify-content: center;
         align-items: center;
-        text-decoration: none;
+        background-color: aqua;
+        background-color: rgb(37, 36, 36);
+        min-height: 288.4px;
+        width: 100%;
         i {
           font-size: 62px;
           color: white;
@@ -58,6 +49,8 @@ main {
       gap: 10px;
       position: relative;
       background-color: rgb(37, 36, 36);
+      min-height: 288.4px;
+      box-shadow: 2px 2px 4px black;
       .bookMark {
         position: absolute;
         display: flex;

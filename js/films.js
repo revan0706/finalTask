@@ -1,7 +1,7 @@
 function filmsRender() {
   let films = JSON.parse(localStorage.getItem("Films") || "[]");
   let watchList = JSON.parse(localStorage.getItem("watchList") || "[]");
-  let x = `<div class="createFilm"  ><a href="createFilm.html"   target="_blank"><i class="fa-solid fa-plus"></i></a></div>`;
+  let x = `<a href="createFilm.html"   target="_blank"><div class="createFilm"  ><i class="fa-solid fa-plus"></i></div></a>`;
   for (let i = 0; i < films.length; i++) {
     x += `<div class="film">
     ${

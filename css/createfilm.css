@@ -9,7 +9,7 @@ body {
   justify-content: center;
   height: 100vh;
   flex-direction: column;
-  background: url(https://t3.ftcdn.net/jpg/01/15/03/38/360_F_115033825_CmHuh01QvB7T8btaOv0MK0WaKLZavdXx.jpg);
+  background: url(https://st2.depositphotos.com/1030956/7518/v/950/depositphotos_75186047-stock-illustration-geometric-black-and-white-background.jpg);
   background-size: 100% 100%;
   object-fit: cover;
   color: #f1f1f1;
@@ -20,7 +20,7 @@ body {
   }
   .createFilm {
     position: absolute;
-    top: 61.87px;
+    top: 60px;
     width: 100%;
     display: grid;
     align-items: flex-start;
@@ -28,7 +28,7 @@ body {
     justify-items: center;
     align-content: center;
     gap: 10px;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(70px);
     min-height: 100vh;
     form {
       display: grid;
@@ -48,12 +48,26 @@ body {
           outline: none;
         }
       }
+
+      select {
+        background-color: transparent;
+        color: #f1f1f1;
+        max-height: 52.78px;
+        &:focus-visible {
+          outline: none;
+        }
+      }
+
+      textarea {
+        min-height: 52.78px;
+      }
     }
     input[type="submit"] {
       margin-top: 20px;
       background-color: black;
       color: #f1f1f1;
       padding: 8px 16px;
+      border-radius: 10px;
 
       &:hover {
         background-color: white;

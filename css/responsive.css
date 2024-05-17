@@ -91,13 +91,6 @@
       grid-template-columns: 250px 250px !important;
     }
   }
-  .createActors {
-    form {
-      input {
-        width: 350px !important;
-      }
-    }
-  }
 
   .filmDetails {
     .headSection {
@@ -143,13 +136,6 @@
     form {
       grid-template-columns: 272px !important;
       gap: 60px;
-    }
-  }
-  .createActors {
-    form {
-      input {
-        width: 300px !important;
-      }
     }
   }
 
@@ -207,13 +193,6 @@
       }
     }
   }
-  .createActors {
-    form {
-      input {
-        width: 270px !important;
-      }
-    }
-  }
 
   .filmDetails {
     .headSection {
@@ -250,6 +229,16 @@
       }
     }
   }
+
+  .createActors {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+    form {
+      grid-template-columns: 250px !important;
+      gap: 30px !important;
+    }
+  }
 }
 @media (max-width: 440px) {
   .actorList {
@@ -257,13 +246,6 @@
   }
   .films {
     grid-template-columns: 200px !important;
-  }
-  .createActors {
-    form {
-      input {
-        width: 230px !important;
-      }
-    }
   }
 
   .filmDetails {
@@ -301,18 +283,19 @@
       }
     }
   }
+
+  .createActors {
+    form {
+      input {
+        width: 90% !important;
+      }
+    }
+  }
 }
 
 @media (max-width: 340px) {
   .actorList {
     grid-template-columns: auto !important ;
-  }
-  .createActors {
-    form {
-      input {
-        width: 170px !important;
-      }
-    }
   }
 
   .filmDetails {

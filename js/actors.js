@@ -27,12 +27,12 @@ function creatActors() {
 
   for (let i = 0; i < actors.length; i++) {
     if (actors[i].id > maksActorID) {
-      maksActorID = actors[i].id + 1;
+      maksActorID = actors[i].id;
     }
   }
 
   let newActor = {
-    id: maksActorID,
+    id: maksActorID + 1,
     actorsName: actorName.value,
     actorsSurname: actorSurname.value,
     actorsImg: actorImg.value,

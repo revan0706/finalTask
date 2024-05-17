@@ -38,32 +38,53 @@
       >
         <div class="list" id="list"></div>
         <div class="watchListClose" onclick="watchListOpenClose()">
-          <i class="fa-solid fa-circle-xmark"></i>
+          <i class="fa-solid fa-xmark"></i>
         </div>
       </div>
     </header>
     <div class="createFilm">
       <h1>Create Film</h1>
-      <form action="">
-        <input type="text" name="" id="title" placeholder="Title" />
-        <input type="number" name="" id="imdb" placeholder="IMDb" />
-        <input type="url" name="" id="poster" placeholder="Poster (url)" />
-        <input type="url" name="" id="src" placeholder="Src (url)" />
-        <input type="date" name="" id="year" placeholder="Year" />
+      <form action="" onsubmit="createFilm(event)" id="creatFilmForm">
+        <input type="text" name="" id="title" placeholder="Title" required />
+        <input
+          type="number"
+          name=""
+          id="imdb"
+          placeholder="IMDb"
+          required
+          step="0.1"
+        />
+        <input
+          type="url"
+          name=""
+          id="poster"
+          placeholder="Poster (url)"
+          required
+        />
+        <input type="url" name="" id="src" placeholder="Src (url)" required />
+        <input type="month" name="" id="year" placeholder="Year" required />
         <input
           type="number"
           name=""
           id="duration"
           placeholder="Duration (minute)"
+          required
         />
-        <input type="text" name="" id="genres" placeholder="Genres" />
-        <input type="text" name="" id="director" placeholder="Director" />
-        <input type="text" name="" id="writer" placeholder="Writer" />
-        <input type="text" name="" id="language" placeholder="Language" />
-        <input type="text" name="" id="plot" placeholder="Plot" />
-        <select name="" id="actors"></select>
+
+        <input
+          type="text"
+          name=""
+          id="director"
+          placeholder="Director"
+          required
+        />
+        <input type="text" name="" id="writer" placeholder="Writer" required />
+        <select id="languages" multiple size="3"></select>
+        <select name="" id="genres" multiple size="3"></select>
+        <select name="" id="actors" multiple size="3"></select>
+        <textarea name="" id="plot" placeholder="Plot" required ></textarea>
       </form>
-      <input type="submit" value="Create Film" onclick="createFilm()" />
+      <input type="submit" value="Create Film" form="creatFilmForm" />
     </div>
 
     <script src="js/watchlist.js"></script>
