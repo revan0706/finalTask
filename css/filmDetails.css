@@ -54,6 +54,7 @@ body {
         object-fit: cover;
         background-repeat: no-repeat;
         background-size: contain !important;
+        background-repeat: no-repeat;
       }
       .bookMark {
         position: absolute;

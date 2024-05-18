@@ -108,6 +108,8 @@ body {
         overflow: auto;
         align-content: flex-start;
         backdrop-filter: blur(26px);
+        border-radius: 10px;
+        border: 1.5px solid white;
         .watchListTitle {
           width: 100%;
 

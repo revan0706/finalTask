@@ -40,8 +40,9 @@ function watchListAdd(filmID) {
   }
 
   if (location.pathname == "/filmDetails.html") {
-    filmDetailsRender()
+    filmDetailsRender();
   }
+
   watchListRender();
 }
 function watchListRemove(filmID) {
@@ -57,7 +58,7 @@ function watchListRemove(filmID) {
     filmsRender();
   }
   if (location.pathname == "/filmDetails.html") {
-    filmDetailsRender()
+    filmDetailsRender();
   }
   watchListRender();
 }
