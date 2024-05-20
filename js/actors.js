@@ -17,7 +17,7 @@ function actorsRender() {
   actorsList.innerHTML = newActorList;
 }
 
-function creatActors() {
+function creatActors(e) {
   let actors = JSON.parse(localStorage.getItem("Actors") || "[]");
   let actorName = document.getElementById("actorsName");
   let actorSurname = document.getElementById("actorsSurname");
@@ -40,6 +40,9 @@ function creatActors() {
   actors.push(newActor);
 
   localStorage.setItem("Actors", JSON.stringify(actors));
+
+  e.preventDefault();
+  actorsRender()
 }
 
 actorsRender();

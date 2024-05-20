@@ -17,14 +17,21 @@ body {
 
     .createActors {
       margin-left: 16px;
+      /* margin: auto; */
+      display: flex;
+      flex-direction: column;
+      align-content: space-around;
+      align-items: center;
+      /* margin: auto; */
       h1 {
         margin-bottom: 42px;
       }
       form {
         display: grid;
-        grid-template-columns: 200px 200px;
-        justify-items: center;
+        grid-template-columns: 300px 300px;
         gap: 25px;
+        justify-content: space-around;
+        justify-items: center;
         input {
           background-color: transparent;
           border: 0px;
@@ -46,7 +53,7 @@ body {
             border: 1px solid #b7b1b1;
             width: 150px;
             border-radius: 10px;
-            background-color: black;
+            background-color: transparent;
 
             &:hover {
               background-color: transparent;

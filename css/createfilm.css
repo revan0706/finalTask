@@ -53,6 +53,15 @@ body {
         background-color: transparent;
         color: #f1f1f1;
         max-height: 52.78px;
+
+        &::-webkit-scrollbar {
+          background: transparent;
+          width: 4px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: white;
+        }
+
         &:focus-visible {
           outline: none;
         }

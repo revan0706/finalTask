@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+.container {
+  margin: auto !important;
+}
 
 @media (max-width: 1400px) {
   .container {

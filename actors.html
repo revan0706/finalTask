@@ -13,7 +13,7 @@
     <header>
       <div class="container">
         <div class="logo">
-          <a href="films.html" style="cursor: pointer">
+          <a href="index.html" style="cursor: pointer">
             <img src="imgs/logo.svg" alt=""
           /></a>
         </div>
@@ -26,7 +26,7 @@
         </div>
 
         <div class="verNavBar" id="navBar">
-          <a href="films.html">Films</a>
+          <a href="index.html">Films</a>
           <a onclick="watchListOpenClose()" id="watchListBtn">Watchlist</a>
         </div>
       </div>
@@ -43,37 +43,39 @@
     </header>
 
     <main>
-      <div class="createActors">
-        <h1>Create Actor</h1>
-        <form action="" onsubmit="creatActors(event)">
-          <input
-            type="text"
-            name=""
-            id="actorsName"
-            placeholder="Actor Name"
-            required
-          />
-          <input
-            type="text"
-            name=""
-            id="actorsSurname"
-            placeholder="Actor Surname"
-            required
-          />
+      <div class="container">
+        <div class="createActors">
+          <h1>Create Actor</h1>
+          <form action="" onsubmit="creatActors(event)">
+            <input
+              type="text"
+              name=""
+              id="actorsName"
+              placeholder="Actor Name"
+              required
+            />
+            <input
+              type="text"
+              name=""
+              id="actorsSurname"
+              placeholder="Actor Surname"
+              required
+            />
 
-          <input
-            type="url"
-            name=""
-            id="actorsImg"
-            placeholder="Actor Photo (URL)"
-            required
-          />
-          <input type="submit" value="Create Actor" />
-        </form>
-      </div>
-      <div class="actors">
-        <div class="actorListTitle"><h1>Actors</h1></div>
-        <div class="actorList" id="actorList"></div>
+            <input
+              type="url"
+              name=""
+              id="actorsImg"
+              placeholder="Actor Photo (URL)"
+              required
+            />
+            <input type="submit" value="Create Actor" />
+          </form>
+        </div>
+        <div class="actors">
+          <div class="actorListTitle"><h1>Actors</h1></div>
+          <div class="actorList" id="actorList"></div>
+        </div>
       </div>
     </main>
 

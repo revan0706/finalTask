@@ -108,14 +108,13 @@ function formGenresRender() {
   genres.innerHTML = x;
 }
 function formActorsRender() {
-  let actors = JSON.parse(localStorage.getItem("Actors"));
+  let actors = JSON.parse(localStorage.getItem("Actors") || "[]");
   let formActors = document.getElementById("actors");
   let actorList = "";
 
   for (let i = 0; i < actors.length; i++) {
     actorList += `<option value="${actors[i].id}">${actors[i].actorsName} ${actors[i].actorsSurname}</option>`;
   }
-
   formActors.innerHTML = actorList;
 }
 
@@ -131,3 +130,9 @@ function formLanguagesRender() {
 formLanguagesRender();
 formActorsRender();
 formGenresRender();
+
+
+// "https://www.youtube.com/embed/zx_cjyQb110?si=geF4-sSEHTcC1BIM
+// https://www.youtube.com/embed/Su34c5Z8DW4?si=aY1UBql3TGLN-ZML
+
+// https://www.youtube.com/watch?v=Su34c5Z8DW4

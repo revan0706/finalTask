@@ -22,7 +22,7 @@ function watchListOpenClose() {
   }
   function watchListOpenAnimation() {
     const watchList = document.getElementById("watchList");
-    if (right == 20) {
+    if (right == 10) {
       clearInterval(open);
     } else {
       right += 10;
@@ -35,7 +35,7 @@ function watchListAdd(filmID) {
   let watchList = JSON.parse(localStorage.getItem("watchList") || "[]");
   watchList.push(filmID);
   localStorage.setItem("watchList", JSON.stringify(watchList));
-  if (location.pathname == "/films.html") {
+  if (location.pathname == "/index.html") {
     filmsRender();
   }
 
@@ -54,7 +54,7 @@ function watchListRemove(filmID) {
     }
   }
   localStorage.setItem("watchList", JSON.stringify(newList));
-  if (location.pathname == "/films.html") {
+  if (location.pathname == "/index.html") {
     filmsRender();
   }
   if (location.pathname == "/filmDetails.html") {
@@ -67,7 +67,7 @@ function watchListRender() {
   let localWatchList = JSON.parse(localStorage.getItem("watchList") || "[]");
   let films = JSON.parse(localStorage.getItem("Films") || "[]");
   let watchList = document.getElementById("list");
-  let newWatchList = "<div class='watchListTitle'><h1>Watch List</h1></div>";
+  let newWatchList = "<div class='watchListTitle'><h1>Watchlist</h1></div>";
 
   for (let i = 0; i < localWatchList.length; i++) {
     for (let a = 0; a < films.length; a++) {
