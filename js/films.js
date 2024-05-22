@@ -1,7 +1,11 @@
 function filmsRender() {
   let films = JSON.parse(localStorage.getItem("Films") || "[]");
   let watchList = JSON.parse(localStorage.getItem("watchList") || "[]");
-  let x = `<a href="createFilm.html"   target="_blank"><div class="createFilm"  ><i class="fa-solid fa-plus"></i></div></a>`;
+  let x = `<a href="createFilm.html"   target="_blank"><div class="createFilm"  ><i class="fa-solid fa-plus"></i></div></a>  ${
+    films.length
+      ? ""
+      : `<div class="emptyFilmListTitle"><i class="fa-regular fa-circle-left"></i><h1>The movie does not exist, create one</h1></div>`
+  } `;
   for (let i = 0; i < films.length; i++) {
     x += `<div class="film">
     ${
@@ -19,9 +23,11 @@ function filmsRender() {
     }
      
     
-      <a href="filmDetails.html#${films[i].id}"><div class="photo"><img src="${
+      <a href="filmDetails.html#${
+        films[i].id
+      }"><div class="photo" style="background: url(${
       films[i].poster
-    }" alt="" /></div></a>
+    });"></div></a>
       <div class="imdb"><i class="fa-solid fa-star"></i>${films[i].IMDb}</div>
       <div class="name">${films[i].title}</div>
     </div>`;

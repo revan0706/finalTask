@@ -23,6 +23,10 @@ function createFilm(event) {
   let filmIMDB = document.getElementById("imdb");
   let filmPoster = document.getElementById("poster");
   let filmSrc = document.getElementById("src");
+  let filmSrcStart = filmSrc.indexOf("watch?v=") + 8;
+  let filmSrcEnd =
+    filmSrc.indexOf("&") == -1 ? filmSrc.length : filmSrc.indexOf("&");
+
   let filmYear = document.getElementById("year");
   let filmDuration = document.getElementById("duration");
   let filmGenres = document.getElementById("genres");
@@ -45,7 +49,6 @@ function createFilm(event) {
   let genresOpt = document.getElementById("genres");
   let selectedGenres = [];
   let notCompleted = "";
-  filmSrc = filmSrc.value.slice(32, filmSrc.value.length);
   let maxID = 0;
   for (let i = 0; i < films.length; i++) {
     if (films[i].id > maxID) {
@@ -69,7 +72,7 @@ function createFilm(event) {
       title: filmTitle.value,
       poster: filmPoster.value,
       IMDb: filmIMDB.value,
-      src: filmSrc,
+      src: filmSrc.value.slice(filmSrcStart, filmSrcEnd),
       year: filmYear.value,
       duration: filmDuration.value,
       genres: selectedGenres,
@@ -97,6 +100,8 @@ function createFilm(event) {
     }
     alert(`${notCompleted} not completed !`);
   }
+
+  event.preventDefault();
 }
 function formGenresRender() {
   let genres = document.getElementById("genres");
@@ -130,7 +135,6 @@ function formLanguagesRender() {
 formLanguagesRender();
 formActorsRender();
 formGenresRender();
-
 
 // "https://www.youtube.com/embed/zx_cjyQb110?si=geF4-sSEHTcC1BIM
 // https://www.youtube.com/embed/Su34c5Z8DW4?si=aY1UBql3TGLN-ZML

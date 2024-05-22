@@ -60,7 +60,7 @@ function filmDetailsRender() {
   
       <div class="filmTrailer">
         <iframe
-          src="https://www.youtube.com/embed/${foundFilm.src}"
+          src="https://www.youtube.com/embed/q7QBVO6RZ1w"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

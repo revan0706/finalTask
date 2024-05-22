@@ -1,20 +1,28 @@
 function actorsRender() {
   let actors = JSON.parse(localStorage.getItem("Actors") || "[]");
   let actorsList = document.getElementById("actorList");
+  let emptyActorListTitle = document.getElementById("emptyActorListTitle");
   let newActorList = "";
 
-  for (let i = 0; i < actors.length; i++) {
-    newActorList += `<div class="actor">
-    <div class="foto">
-      <img
-        src="${actors[i].actorsImg}"
-        alt=""
-      />
-    </div>
-    <div class="about"><p>${actors[i].actorsName} ${actors[i].actorsSurname}</p></div>
-  </div>`;
+  if (actors.length) {
+    actorsList.style.display = "block";
+    emptyActorListTitle.style.display = "none";
+    for (let i = 0; i < actors.length; i++) {
+      newActorList += `<div class="actor">
+      <div class="foto">
+        <img
+          src="${actors[i].actorsImg}"
+          alt=""
+        />
+      </div>
+      <div class="about"><p>${actors[i].actorsName} ${actors[i].actorsSurname}</p></div>
+    </div>`;
+    }
+    actorsList.innerHTML = newActorList;
+  } else {
+    actorsList.style.display = "none";
+    emptyActorListTitle.style.display = "block";
   }
-  actorsList.innerHTML = newActorList;
 }
 
 function creatActors(e) {
@@ -41,8 +49,8 @@ function creatActors(e) {
 
   localStorage.setItem("Actors", JSON.stringify(actors));
 
+  actorsRender();
   e.preventDefault();
-  actorsRender()
 }
 
 actorsRender();

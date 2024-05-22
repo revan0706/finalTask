@@ -42,6 +42,26 @@ main {
         }
       }
     }
+    .emptyFilmListTitle {
+      position: absolute;
+      left: 32%;
+      top: 100px;
+      color: #f1f1f1;
+      display: flex;
+      flex-direction: row;
+      gap: 18px;
+      border-bottom: 0.5px solid rgb(255, 255, 0);
+
+      i {
+        display: flex;
+        align-items: center;
+        font-size: 28px;
+      }
+
+      h1 {
+      }
+    }
+
     .film {
       color: white;
       display: flex;
@@ -104,13 +124,24 @@ main {
         }
       }
 
-      .photo {
-        height: 220px;
-        background-color: gray;
-        img {
+      a {
+        .photo {
+          height: 220px;
           width: 100%;
-          height: 100%;
+          background-color: gray;
           object-fit: cover;
+          background-repeat: no-repeat !important;
+          background-size: cover !important;
+          background-position: center !important;
+
+          &:hover {
+            filter: brightness(92%);
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
         }
       }
       .imdb {
