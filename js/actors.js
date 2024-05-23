@@ -5,7 +5,7 @@ function actorsRender() {
   let newActorList = "";
 
   if (actors.length) {
-    actorsList.style.display = "block";
+    actorsList.style.display = "grid";
     emptyActorListTitle.style.display = "none";
     for (let i = 0; i < actors.length; i++) {
       newActorList += `<div class="actor">
@@ -20,7 +20,7 @@ function actorsRender() {
     }
     actorsList.innerHTML = newActorList;
   } else {
-    actorsList.style.display = "none";
+    actorsList.style.display = "grid";
     emptyActorListTitle.style.display = "block";
   }
 }

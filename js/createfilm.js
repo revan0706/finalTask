@@ -16,6 +16,8 @@ localStorage.setItem("languages", JSON.stringify(languages));
 localStorage.setItem("genres", JSON.stringify(genres));
 
 function createFilm(event) {
+  event.preventDefault();
+
   let films = JSON.parse(localStorage.getItem("Films") || "[]");
   let filmTitle = Boolean(String(document.getElementById("title").value).trim())
     ? document.getElementById("title")
@@ -23,9 +25,9 @@ function createFilm(event) {
   let filmIMDB = document.getElementById("imdb");
   let filmPoster = document.getElementById("poster");
   let filmSrc = document.getElementById("src");
-  let filmSrcStart = filmSrc.indexOf("watch?v=") + 8;
+  let filmSrcStart = filmSrc.value.indexOf("watch?v=") + 8;
   let filmSrcEnd =
-    filmSrc.indexOf("&") == -1 ? filmSrc.length : filmSrc.indexOf("&");
+    filmSrc.value.indexOf("&") == -1 ? filmSrc.value.length : filmSrc.value.indexOf("&");
 
   let filmYear = document.getElementById("year");
   let filmDuration = document.getElementById("duration");
@@ -85,7 +87,6 @@ function createFilm(event) {
     films.push(film);
     localStorage.setItem("Films", JSON.stringify(films));
   } else {
-    event.preventDefault();
     if (filmTitle == false) {
       notCompleted += `${Boolean(notCompleted.length) ? "," : ""}Title`;
     }
@@ -101,7 +102,6 @@ function createFilm(event) {
     alert(`${notCompleted} not completed !`);
   }
 
-  event.preventDefault();
 }
 function formGenresRender() {
   let genres = document.getElementById("genres");
