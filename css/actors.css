@@ -6,8 +6,7 @@
 body {
   background: url(https://t3.ftcdn.net/jpg/01/15/03/38/360_F_115033825_CmHuh01QvB7T8btaOv0MK0WaKLZavdXx.jpg);
   main {
-    position: absolute;
-    top: 58.13px;
+    padding: 58.13px 0px;
     width: 100%;
     color: white;
     background-size: 100% 100%;

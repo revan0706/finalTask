@@ -5,13 +5,18 @@ footer {
   background-color: black;
   color: white;
   align-items: center;
+
   .footerTop {
     .socialMedia {
       margin: 16px 0px;
       display: flex;
       gap: 10px;
-      i {
-        font-size: 26px;
+      a {
+        text-decoration: none;
+        color: white;
+        i {
+          font-size: 26px;
+        }
       }
     }
   }
@@ -24,8 +29,8 @@ footer {
     width: 60%;
     margin-bottom: 16px;
     justify-content: center;
-    p {
-      margin: 2px;
+    a {
+      color: white;
     }
   }
 }

@@ -6,29 +6,35 @@
     <title>Create Film</title>
     <link rel="shortcut icon" href="imgs/bigLogo.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/createfilm.css" />
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
     <header>
       <div class="container">
         <div class="logo">
-          <a href="index.html" style="cursor: pointer">
-            <img src="imgs/logo.svg" alt=""
-          /></a>
+          <a href="index.html"><img src="imgs/logo.svg" alt="" style="cursor: pointer" /></a>
         </div>
 
-        <div class="searchInput">
-          <input type="text" name="" id="" placeholder="Search IMDb" />
+        <div class="searchInput" oninput="renderSearchBox()">
+          <input
+            type="text"
+            name=""
+            id="searchInput"
+            placeholder="Search IMDb"
+          />
           <div class="searchBtn">
             <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="searchBox" id="searchBox">
+          
           </div>
         </div>
 
         <div class="verNavBar" id="navBar">
-          <a href="index.html">Films</a>
           <a href="actors.html">Actors</a>
-          <a onclick="watchListOpenClose()" id="watchListBtn">WatchList</a>
+          <a onclick="watchListOpenClose()" id="watchListBtn">Watchlist</a>
         </div>
       </div>
       <div
@@ -86,7 +92,38 @@
       </form>
       <input type="submit" value="Create Film" form="creatFilmForm" />
     </div>
-
+    <footer>
+      <div class="footerTop">
+        <div class="socialMedia">
+          <a href="https://www.instagram.com/imdb/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://www.facebook.com/imdb/"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://x.com/imdb"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.youtube.com/channel/UC_vz6SvmIkYs1_H3Wv2SKlg"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+          <a href="https://www.tiktok.com/@imdb">
+            <i class="fa-brands fa-tiktok"></i
+          ></a>
+        </div>
+      </div>
+      <div class="footerBottom">
+        <a href="index.html">Films</a>
+        <a href="createFilm.html">Create film</a>
+        <a href="actors.html">Actors</a>
+        <a>Box Oficce Mojo</a>
+        <a>License İMDb Data</a>
+        <a>Press Room</a>
+        <a>Advertising</a>
+        <a>Jobs</a>
+        <a>Conditions of Use</a>
+        <a>Privacy Policy</a>
+      </div>
+    </footer>
+    <script src="js/searchBox.js"></script>
     <script src="js/watchlist.js"></script>
     <script src="js/createfilm.js"></script>
     <script

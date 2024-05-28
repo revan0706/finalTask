@@ -27,7 +27,9 @@ function createFilm(event) {
   let filmSrc = document.getElementById("src");
   let filmSrcStart = filmSrc.value.indexOf("watch?v=") + 8;
   let filmSrcEnd =
-    filmSrc.value.indexOf("&") == -1 ? filmSrc.value.length : filmSrc.value.indexOf("&");
+    filmSrc.value.indexOf("&") == -1
+      ? filmSrc.value.length
+      : filmSrc.value.indexOf("&");
 
   let filmYear = document.getElementById("year");
   let filmDuration = document.getElementById("duration");
@@ -101,7 +103,7 @@ function createFilm(event) {
     }
     alert(`${notCompleted} not completed !`);
   }
-
+  window.location.replace("index.html");
 }
 function formGenresRender() {
   let genres = document.getElementById("genres");

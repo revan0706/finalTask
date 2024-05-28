@@ -4,7 +4,6 @@
 }
 
 body {
-  display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -19,8 +18,7 @@ body {
     top: 0px;
   }
   .createFilm {
-    position: absolute;
-    top: 60px;
+    padding: 58.13px 0px;
     width: 100%;
     display: grid;
     align-items: flex-start;
@@ -69,18 +67,28 @@ body {
 
       textarea {
         min-height: 52.78px;
+        background-color: transparent;
+
+        &::placeholder {
+          color: #f1f1f1;
+        }
+
+        &:focus-visible {
+          outline: none;
+          color: #f1f1f1;
+        }
       }
     }
     input[type="submit"] {
       margin-top: 20px;
-      background-color: black;
-      color: #f1f1f1;
+      background-color: transparent;
+      color: #c8c8c8;
       padding: 8px 16px;
       border-radius: 10px;
-
+      border-color: #c2c2c2;
       &:hover {
-        background-color: white;
-        color: black;
+        border-color: white;
+        color: white;
       }
     }
   }

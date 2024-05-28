@@ -173,6 +173,12 @@
       }
     }
   }
+
+  .emptyFilmListTitle {
+    h1 {
+      font-size: 23px !important;
+    }
+  }
 }
 @media (max-width: 576px) {
   .container {
@@ -242,6 +248,14 @@
       gap: 30px !important;
     }
   }
+
+  .emptyFilmListTitle {
+    grid-column: 1/4 !important;
+    grid-row: 2/3 !important;
+    h1 {
+      font-size: 19px !important;
+    }
+  }
 }
 @media (max-width: 440px) {
   .actorList {
@@ -294,6 +308,13 @@
       }
     }
   }
+  .emptyFilmListTitle {
+    grid-column: 1/4 !important;
+    grid-row: 2/2 !important;
+    h1 {
+      font-size: 17px !important;
+    }
+  }
 }
 
 @media (max-width: 340px) {
@@ -334,6 +355,16 @@
           width: 250px !important;
         }
       }
+    }
+  }
+
+  .emptyFilmListTitle {
+    grid-column: 1/2 !important;
+    grid-row: 2/2 !important;
+    display: flex;
+    justify-content: center;
+    h1 {
+      font-size: 17px !important;
     }
   }
 }

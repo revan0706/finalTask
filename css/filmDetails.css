@@ -152,7 +152,6 @@ body {
             content: "Director:";
           }
           p {
-            border: 1.5px solid rgba(255, 255, 255, 0.2);
             border-radius: 12px;
             padding: 4px;
           }
@@ -165,7 +164,7 @@ body {
           border-bottom: 1px solid rgb(255, 255, 255, 0.2);
 
           p {
-            color: blue;
+            color: #f1f1f1;
             &:hover {
               text-decoration: underline;
             }
@@ -179,13 +178,14 @@ body {
         .actors {
           display: flex;
           align-items: center;
-          gap: 5px;
+          gap: 2px;
+          flex-wrap: wrap;
           p {
-            color: blue;
-
-            &:hover {
-              text-decoration: underline;
-            }
+            color: #f1f1f1;
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 3px;
+            margin: 4px;
           }
 
           &::before {
