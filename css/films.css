@@ -7,7 +7,7 @@ main {
   background-color: black;
   width: 100%;
   height: auto;
-  padding: 58.13px 0px 0px 0px;
+  padding: 55.2px 0px 0px 0px;
   background: url(https://cdn.cimri.io/image/240x240/muzi-mermer-siyah-fotograf-arka-plan-beyaz-ve-sari-granit-doku-fon-cocuk-dogum-gunu-partisi-fotograf-video-arka-planlari-15-x-21-m-xt-6731_750977098.jpg);
   background-size: 100% 100%;
   object-fit: cover;
@@ -41,6 +41,15 @@ main {
           color: white;
         }
       }
+    }
+
+    .movieNotfound {
+      grid-column: 2/6;
+      color: #f1f1f1;
+      display: flex;
+      flex-direction: row;
+      gap: 18px;
+      border-bottom: 0.5px solid rgb(255, 255, 0);
     }
     .emptyFilmListTitle {
       grid-column: 2/6;

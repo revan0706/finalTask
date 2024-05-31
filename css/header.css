@@ -24,19 +24,24 @@ body {
       .logo {
         display: flex;
         align-items: center;
+
+        img {
+          height: 26px;
+        }
       }
 
-      .searchInput {
+      .bigSearchBar {
         display: flex;
         align-items: stretch;
         flex: 1;
         position: relative;
-
         justify-content: center;
+        border-radius: 8px;
+        border: 1.3px solid transparent;
         input {
           border-radius: 8px 0px 0px 8px;
           border: 0px;
-          width: 90%;
+          width: 97%;
           padding: 6px;
         }
         input:focus-visible {
@@ -53,59 +58,62 @@ body {
             color: black;
           }
         }
-
-        .searchBox {
-          display: none;
-          flex-direction: column;
-          background-color: black;
-          width: 100%;
-          gap: 10px;
-          padding: 16px 12px;
+      }
+      .smallSearchBar {
+        display: flex;
+        justify-content: right;
+        flex: 1;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -40px;
+        bottom: 70px;
+        /* display: none; */
+        #searchInputLabel {
+          position: relative;
+          right: 26px;
+          z-index: 1;
+          width: 16px;
+          height: 100%;
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+        }
+        #searchInput {
           position: absolute;
-          top: 48px;
-          h1 {
-            margin: auto;
-            font-size: medium;
-          }
-          a {
-            text-decoration: none;
-            color: #f1f1f1;
-            .film {
-              display: flex;
-              height: 100px;
-              flex-direction: row;
-              padding: 5px;
-              gap: 10px;
-              border-bottom: 1px solid #b7b1b1;
-              .poster {
-                height: 100%;
-                width: 74px;
-                img {
-                  height: 100%;
-                  width: 100%;
-                }
-              }
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 2px;
+          background-color: black;
+          color: #f1f1f1;
+          font-size: 16px;
 
-              .about {
-                padding: 5px 0px;
-              }
-            }
+          &::placeholder {
+            color: #f1f1f1;
           }
         }
+        .searchBtn {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+        }
       }
-
       .verNavBar {
         display: flex;
         align-items: center;
         gap: 10px;
 
         a {
-          padding: 8px;
+          padding: 6px;
           text-decoration: none;
           color: white;
           border-radius: 4px;
           cursor: pointer;
 
+          &.searchBtn {
+            display: none;
+          }
           &:hover {
             background-color: rgb(35, 35, 35);
           }

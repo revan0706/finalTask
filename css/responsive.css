@@ -256,6 +256,14 @@
       font-size: 19px !important;
     }
   }
+
+  .searchBtn {
+    display: block !important;
+  }
+
+  .bigSearchBar {
+    display: none !important;
+  }
 }
 @media (max-width: 440px) {
   .actorList {

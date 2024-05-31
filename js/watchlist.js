@@ -73,7 +73,7 @@ function watchListRender() {
     for (let a = 0; a < films.length; a++) {
       if (localWatchList[i] == films[a].id) {
         newWatchList += ` <div class="added">
-      <div class="foto"><img src="${films[a].poster}" alt="" /></div>
+      <div class="foto"><a href="filmDetails.html#${films[a].id}"><img src="${films[a].poster}" alt="" /></a></div>
       <div class="about">
         <div class="name">${films[a].title}</div>
         <div class="imdb"><i class="fa-solid fa-star"></i>${films[a].IMDb}</div>
