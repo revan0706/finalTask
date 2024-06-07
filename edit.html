@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IMDb</title>
+    <title>Create Film</title>
     <link rel="shortcut icon" href="imgs/bigLogo.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/films.css" />
+    <link rel="stylesheet" href="css/edithtml.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
@@ -14,47 +14,24 @@
     <header>
       <div class="container">
         <div class="logo">
-          <img src="imgs/logo.svg" alt="" style="cursor: pointer" />
+          <a href="index.html"
+            ><img src="imgs/logo.svg" alt="" style="cursor: pointer"
+          /></a>
         </div>
 
-        <div class="bigSearchBar" id="bigSearchBar">
+        <div class="bigSearchBar">
           <input
             type="text"
             name=""
             id="searchInput"
             placeholder="Search IMDb"
           />
-          <div class="searchBtn" onclick=" searchFilms()">
+          <div class="searchBtn">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
         </div>
-        <div
-          class="smallSearchBar"
-          id="smallSearchBar"
-          style="bottom: 60px; top: -60px; visibility: hidden"
-        >
-          <label
-            for="searchInput"
-            id="searchInputLabel"
-            onclick="smallSearchBarOpenClose()"
-            ><i class="fa-solid fa-x"></i
-          ></label>
-          <input
-            type="text"
-            name=""
-            id="searchInput"
-            placeholder="Search IMDb"
-            oninput="searchFilms()"
-          />
-        </div>
+
         <div class="verNavBar" id="navBar">
-          <a
-            class="searchBtn"
-            id="searchBtn"
-            onclick=" smallSearchBarOpenClose()"
-          >
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </a>
           <a href="actors.html">Actors</a>
           <a onclick="watchListOpenClose()" id="watchListBtn">Watchlist</a>
         </div>
@@ -70,10 +47,53 @@
         </div>
       </div>
     </header>
-    <main>
-      <div class="films" id="films"></div>
-    </main>
+    <div class="editFilm">
+      <h1>Edit Film</h1>
+      <form action="" onsubmit="editFilm(event)" id="creatFilmForm">
+        <input type="text" name="" id="title" placeholder="Title" required />
+        <input
+          type="number"
+          name=""
+          id="imdb"
+          placeholder="IMDb"
+          required
+          step="0.1"
+        />
+        <input
+          type="url"
+          name=""
+          id="poster"
+          placeholder="Poster (url)"
+          required
+        />
+        <input type="url" name="" id="src" placeholder="Src (url)" required />
+        <input type="month" name="" id="year" placeholder="Year" required />
+        <input
+          type="number"
+          name=""
+          id="duration"
+          placeholder="Duration (minute)"
+          required
+        />
 
+        <input
+          type="text"
+          name=""
+          id="director"
+          placeholder="Director"
+          required
+        />
+        <input type="text" name="" id="writer" placeholder="Writer" required />
+        <select id="languages" multiple size="3"></select>
+        <select name="" id="genres" multiple size="3"></select>
+        <select name="" id="actors" multiple size="3"></select>
+        <textarea name="" id="plot" placeholder="Plot" required></textarea>
+      </form>
+      <div class="formButtons">
+        <input type="submit" value="SAVE" form="creatFilmForm" />
+        <input type="submit" value="DELETE"  onclick="deleteFilm()" />
+      </div>
+    </div>
     <footer>
       <div class="footerTop">
         <div class="socialMedia">
@@ -100,9 +120,9 @@
         <a>Privacy Policy</a>
       </div>
     </footer>
-    <script src="js/smallSearchBar.js"></script>
-    <script src="js/films.js"></script>
+    <script src="js/edit.js"></script>
     <script src="js/watchlist.js"></script>
+    <script src="js/createfilm.js"></script>
     <script
       src="https://kit.fontawesome.com/c5f8229f0d.js"
       crossorigin="anonymous"

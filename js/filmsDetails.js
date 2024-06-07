@@ -7,6 +7,7 @@ function filmDetailsRender() {
     let foundActors = "";
     let genres = JSON.parse(localStorage.getItem("genres"));
     let foundGenres = "";
+
     let watchList = JSON.parse(localStorage.getItem("watchList") || "[]");
     for (let i = 0; i < films.length; i++) {
       if (films[i].id == hash) {
@@ -29,6 +30,11 @@ function filmDetailsRender() {
         }
       }
     }
+    let filmSrc = String(foundFilm.src);
+    console.log(filmSrc);
+    let filmSrcStart = filmSrc.indexOf("watch?v=") + 8;
+    let filmSrcEnd =
+      filmSrc.indexOf("&") == -1 ? filmSrc.length : filmSrc.indexOf("&");
     if (foundFilm) {
       let film = ` <div class="headSection">
       <div class="firstSection">
@@ -38,7 +44,10 @@ function filmDetailsRender() {
         </div>
       </div>
       <div class="lastSection">
-        <h1 class="imdb"><i class="fa-solid fa-star"></i>${foundFilm.IMDb}</h1>
+      <h1 class="edit"><a href="edit.html#${
+        foundFilm.id
+      }"><i class="fa-solid fa-pen-to-square"></i></a></h1>
+      <h1 class="imdb"><i class="fa-solid fa-star"></i>${foundFilm.IMDb}</h1>
       </div>
     </div>
     <div class="middleSection">
@@ -60,7 +69,10 @@ function filmDetailsRender() {
   
       <div class="filmTrailer">
         <iframe
-          src="https://www.youtube.com/embed/${foundFilm.src}"
+          src="https://www.youtube.com/embed/${foundFilm.src.slice(
+            filmSrcStart,
+            filmSrcEnd
+          )}"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

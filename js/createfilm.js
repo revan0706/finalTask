@@ -25,11 +25,6 @@ function createFilm(event) {
   let filmIMDB = document.getElementById("imdb");
   let filmPoster = document.getElementById("poster");
   let filmSrc = document.getElementById("src");
-  let filmSrcStart = filmSrc.value.indexOf("watch?v=") + 8;
-  let filmSrcEnd =
-    filmSrc.value.indexOf("&") == -1
-      ? filmSrc.value.length
-      : filmSrc.value.indexOf("&");
 
   let filmYear = document.getElementById("year");
   let filmDuration = document.getElementById("duration");
@@ -48,9 +43,13 @@ function createFilm(event) {
   let filmPlot = Boolean(String(document.getElementById("plot").value).trim())
     ? document.getElementById("plot")
     : false;
-  let actorOpt = document.getElementById("actors");
+  let actorOpt = Boolean(document.getElementById("actors").value)
+    ? document.getElementById("actors")
+    : false;
   let selectedActors = [];
-  let genresOpt = document.getElementById("genres");
+  let genresOpt = Boolean(document.getElementById("genres").value)
+    ? document.getElementById("genres")
+    : false;
   let selectedGenres = [];
   let notCompleted = "";
   let maxID = 0;
@@ -70,13 +69,22 @@ function createFilm(event) {
       selectedGenres.push(genresOpt[i].value);
     }
   }
-  if (Boolean(filmTitle && filmDirector && filmWriter && filmPlot)) {
+  if (
+    Boolean(
+      filmTitle &&
+        filmDirector &&
+        filmWriter &&
+        filmPlot &&
+        genresOpt &&
+        actorOpt
+    )
+  ) {
     let film = {
       id: maxID + 1,
       title: filmTitle.value,
       poster: filmPoster.value,
       IMDb: filmIMDB.value,
-      src: filmSrc.value.slice(filmSrcStart, filmSrcEnd),
+      src: filmSrc.value,
       year: filmYear.value,
       duration: filmDuration.value,
       genres: selectedGenres,
@@ -88,6 +96,7 @@ function createFilm(event) {
     };
     films.push(film);
     localStorage.setItem("Films", JSON.stringify(films));
+    window.location.replace("index.html");
   } else {
     if (filmTitle == false) {
       notCompleted += `${Boolean(notCompleted.length) ? "," : ""}Title`;
@@ -101,9 +110,16 @@ function createFilm(event) {
     if (filmPlot == false) {
       notCompleted += `${Boolean(notCompleted.length) ? "," : ""}Plot`;
     }
+
+    if (genresOpt == false) {
+      notCompleted += `${Boolean(notCompleted.length) ? "," : ""}Genres`;
+    }
+    if (actorOpt == false) {
+      notCompleted += `${Boolean(notCompleted.length) ? "," : ""}Actors`;
+    }
     alert(`${notCompleted} not completed !`);
   }
-  window.location.replace("index.html");
+ 
 }
 function formGenresRender() {
   let genres = document.getElementById("genres");
@@ -137,8 +153,3 @@ function formLanguagesRender() {
 formLanguagesRender();
 formActorsRender();
 formGenresRender();
-
-// "https://www.youtube.com/embed/zx_cjyQb110?si=geF4-sSEHTcC1BIM
-// https://www.youtube.com/embed/Su34c5Z8DW4?si=aY1UBql3TGLN-ZML
-
-// https://www.youtube.com/watch?v=Su34c5Z8DW4

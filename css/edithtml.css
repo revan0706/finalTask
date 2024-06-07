@@ -17,7 +17,7 @@ body {
     position: fixed;
     top: 0px;
   }
-  .createFilm {
+  .editFilm {
     padding: 58.13px 0px;
     width: 100%;
     display: grid;
@@ -79,16 +79,25 @@ body {
         }
       }
     }
-    input[type="submit"] {
-      margin-top: 20px;
-      background-color: transparent;
-      color: #c8c8c8;
-      padding: 8px 16px;
-      border-radius: 10px;
-      border-color: #c2c2c2;
-      &:hover {
-        border-color: white;
-        color: white;
+    .formButtons {
+      display: flex;
+      gap: 20px;
+      input[type="submit"] {
+        margin-top: 20px;
+        background-color: transparent;
+        color: #c8c8c8;
+        padding: 8px 16px;
+        border-radius: 10px;
+
+        &:hover {
+          color: white;
+        }
+        &[value="SAVE"] {
+          border-color: #c2c2c2;
+        }
+        &[value="DELETE"] {
+          border-color: #767171;
+        }
       }
     }
   }

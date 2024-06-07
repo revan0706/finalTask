@@ -42,6 +42,11 @@ function searchFilms() {
   let wantedMovie = "";
   if (Boolean(searchInput.value.trim().length)) {
     for (let i = 0; i < localFilms.length; i++) {
+      console.log(
+        String(localFilms[i].title)
+          .toLowerCase()
+          .includes(String(searchInput.value).toLowerCase())
+      );
       if (
         String(localFilms[i].title)
           .toLowerCase()
@@ -82,9 +87,7 @@ function searchFilms() {
           </div>`;
 
         document.getElementById("films").innerHTML = wantedMovie;
-      }else{
-        document.getElementById("films").innerHTML = `<a href="createFilm.html"><div class="createFilm"><i class="fa-solid fa-plus"></i></div></a><h1 class="movieNotfound">Movie not found</h1>`
-      }
+      } 
     }
     films.style.border = "1.3px solid transparent";
   } else {
