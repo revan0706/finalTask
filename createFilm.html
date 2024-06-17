@@ -19,19 +19,48 @@
           /></a>
         </div>
 
-        <div class="bigSearchBar">
+        <div class="bigSearchBar" id="bigSearchBar" style="display: flex">
           <input
             type="text"
             name=""
-            id="searchInput"
+            id="bigSearchInput"
             placeholder="Search IMDb"
+            class="searchInput"
+            onchange="renderSearchBox()"
           />
-          <div class="searchBtn">
+          <div class="searchBtn" onclick=" searchFilms('input1')">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
+          <div class="searchBox" id="searchBox"></div>
         </div>
-
+        <div
+          class="smallSearchBar"
+          id="smallSearchBar"
+          style="bottom: 60px; top: -60px; visibility: hidden"
+        >
+          <label
+            for="searchInput"
+            id="searchInputLabel"
+            onclick="smallSearchBarOpenClose()"
+            ><i class="fa-solid fa-x"></i
+          ></label>
+          <input
+            type="text"
+            name=""
+            id="smallSearchInput"
+            placeholder="Search IMDb"
+            onchange="searchFilms('input2')"
+            class="searchInput"
+          />
+        </div>
         <div class="verNavBar" id="navBar">
+          <a
+            class="searchBtn"
+            id="searchBtn"
+            onclick=" smallSearchBarOpenClose()"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
           <a href="actors.html">Actors</a>
           <a onclick="watchListOpenClose()" id="watchListBtn">Watchlist</a>
         </div>
@@ -66,7 +95,7 @@
           placeholder="Poster (url)"
           required
         />
-        <input type="url" name="" id="src" placeholder="Src (url)" required />
+        <input type="url" name="" id="src" placeholder="Trailer (url)" required />
         <input type="month" name="" id="year" placeholder="Year" required />
         <input
           type="number"
@@ -119,6 +148,7 @@
     </footer>
     <script src="js/watchlist.js"></script>
     <script src="js/createfilm.js"></script>
+    <script src="js/searchBox.js"></script>
     <script
       src="https://kit.fontawesome.com/c5f8229f0d.js"
       crossorigin="anonymous"

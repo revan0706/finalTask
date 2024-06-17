@@ -9,24 +9,30 @@
     <link rel="stylesheet" href="css/films.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/slider.css" />
   </head>
   <body>
     <header>
       <div class="container">
         <div class="logo">
-          <img src="imgs/logo.svg" alt="" style="cursor: pointer" />
+          <a href="index.html"
+            ><img src="imgs/logo.svg" alt="" style="cursor: pointer"
+          /></a>
         </div>
 
-        <div class="bigSearchBar" id="bigSearchBar">
+        <div class="bigSearchBar" id="bigSearchBar" style="display: flex">
           <input
             type="text"
             name=""
-            id="searchInput"
+            id="bigSearchInput"
             placeholder="Search IMDb"
+            class="searchInput"
+            onkeydown="renderSearchBox()"
           />
-          <div class="searchBtn" onclick=" searchFilms()">
+          <div class="searchBtn" onclick=" searchFilms('input1')">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
+          <div class="searchBox" id="searchBox"></div>
         </div>
         <div
           class="smallSearchBar"
@@ -42,9 +48,10 @@
           <input
             type="text"
             name=""
-            id="searchInput"
+            id="smallSearchInput"
             placeholder="Search IMDb"
-            oninput="searchFilms()"
+            onchange="searchFilms('input2')"
+            class="searchInput"
           />
         </div>
         <div class="verNavBar" id="navBar">
@@ -70,11 +77,134 @@
         </div>
       </div>
     </header>
+
     <main>
-      <div class="films" id="films"></div>
+      <div class="slider" id="filmsSlider">
+        <div class="list" id="sliderFilmList">
+          <div class="item">
+            <div
+              class="sliderListItemPoster"
+              style="
+                background: url(https://m.media-amazon.com/images/M/MV5BMzgxMmQxZjQtNDdmMC00MjRlLTk1MDEtZDcwNTdmOTg0YzA2XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_.jpg)
+                  left center/100% 100% no-repeat !important;
+              "
+              id="sliderListItemPoster"
+            ></div>
+            <div class="sliderListItemAbout" id="sliderListItemAbout">
+              <div class="sliderListItemAboutHeadSection">
+                <h1 class="filmTitle">title</h1>
+                <div class="filmIMDb">7.7<i class="fa-solid fa-star"></i></div>
+              </div>
+              <p class="filmPlot">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Provident sit veritatis, quo labore nobis repudiandae quaerat ea
+                repellendus alias sapiente explicabo officia natus iste quas
+                eius, cum dolorem deleniti fugit?
+              </p>
+              <div class="sliderListItemAboutMiddleSection">
+                <div class="director">
+                  <p>Actor1</p>
+                </div>
+                <div class="writer">
+                  <p>writer1</p>
+                </div>
+                <div class="filmGenres">
+                  <p>action</p>
+                  <p>drama</p>
+                  <p>amazing</p>
+                  <p>comedi</p>
+                  <p>abc</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div
+              class="sliderListItemPoster"
+              style="
+                background: url(https://m.media-amazon.com/images/M/MV5BMzgxMmQxZjQtNDdmMC00MjRlLTk1MDEtZDcwNTdmOTg0YzA2XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_.jpg)
+                  left center/100% 100% no-repeat !important;
+              "
+              id="sliderListItemPoster"
+            ></div>
+            <div class="sliderListItemAbout" id="sliderListItemAbout">
+              <div class="sliderListItemAboutHeadSection">
+                <h1 class="filmTitle">title</h1>
+                <div class="filmIMDb">7.7<i class="fa-solid fa-star"></i></div>
+              </div>
+              <p class="filmPlot">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Provident sit veritatis, quo labore nobis repudiandae quaerat ea
+                repellendus alias sapiente explicabo officia natus iste quas
+                eius, cum dolorem deleniti fugit?
+              </p>
+              <div class="sliderListItemAboutMiddleSection">
+                <div class="director">
+                  <p>Actor1</p>
+                </div>
+                <div class="writer">
+                  <p>writer1</p>
+                </div>
+                <div class="filmGenres">
+                  <p>action</p>
+                  <p>drama</p>
+                  <p>amazing</p>
+                  <p>comedi</p>
+                  <p>abc</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div
+              class="sliderListItemPoster"
+              style="
+                background: url(https://m.media-amazon.com/images/M/MV5BMzgxMmQxZjQtNDdmMC00MjRlLTk1MDEtZDcwNTdmOTg0YzA2XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_.jpg)
+                  left center/100% 100% no-repeat !important;
+              "
+              id="sliderListItemPoster"
+            ></div>
+            <div class="sliderListItemAbout" id="sliderListItemAbout">
+              <div class="sliderListItemAboutHeadSection">
+                <h1 class="filmTitle">title</h1>
+                <div class="filmIMDb">7.7<i class="fa-solid fa-star"></i></div>
+              </div>
+              <p class="filmPlot">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Provident sit veritatis, quo labore nobis repudiandae quaerat ea
+                repellendus alias sapiente explicabo officia natus iste quas
+                eius, cum dolorem deleniti fugit?
+              </p>
+              <div class="sliderListItemAboutMiddleSection">
+                <div class="director">
+                  <p>Actor1</p>
+                </div>
+                <div class="writer">
+                  <p>writer1</p>
+                </div>
+                <div class="filmGenres">
+                  <p>action</p>
+                  <p>drama</p>
+                  <p>amazing</p>
+                  <p>comedi</p>
+                  <p>abc</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="buttons">
+          <button id="prev"><</button>
+          <button id="next">></button>
+        </div>
+       
+      </div>
+      <div class="films" id="films">
+        <div class="filmsList" id="filmsList"></div>
+      </div>
     </main>
 
-    <footer>
+    <footer style="position: absolute">
       <div class="footerTop">
         <div class="socialMedia">
           <a href="https://www.instagram.com/imdb/"
@@ -102,7 +232,10 @@
     </footer>
     <script src="js/smallSearchBar.js"></script>
     <script src="js/films.js"></script>
+    <script src="js/searchBox.js"></script>
     <script src="js/watchlist.js"></script>
+    <script src="js/indexhtmlresponsive.js"></script>
+    <script src="js/slider.js"></script>
     <script
       src="https://kit.fontawesome.com/c5f8229f0d.js"
       crossorigin="anonymous"

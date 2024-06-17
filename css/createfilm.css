@@ -66,6 +66,8 @@ body {
       }
 
       textarea {
+        max-width: 300px;
+        min-width: 300px;
         min-height: 52.78px;
         background-color: transparent;
         color: white;

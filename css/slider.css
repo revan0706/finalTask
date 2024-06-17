@@ -1,0 +1,178 @@
+.slider {
+  position: absolute;
+  height: 100vh;
+  margin: auto;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  .list {
+    padding: 55.2px 0px 0px 0px;
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+    .item {
+      display: flex;
+      flex-direction: row;
+
+    a{
+      .sliderListItemPoster {
+        flex: 1;
+        object-fit: cover;
+        display: flex;
+        width: 358.72px;
+        background-size: 100% 100%;
+        filter: grayscale(0.3);
+        height: 100%;
+      }
+    }
+      .sliderListItemAbout {
+        filter: grayscale(0.5);
+        padding: 30px;
+        color: #f1f1f1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .sliderListItemAboutHeadSection {
+          width: 100%;
+          justify-content: space-between;
+          display: flex;
+          align-items: center;
+          .filmTitle {
+            font-size: 46px;
+            margin: 0px;
+          }
+          .filmIMDb {
+            display: flex;
+            font-size: 40px;
+            align-items: stretch;
+            gap: 5px;
+
+            i {
+              color: yellow;
+            }
+          }
+        }
+        .sliderListItemAboutMiddleSection {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          div.director {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+
+            &::before {
+              display: flex;
+              align-items: center;
+              content: "Director:";
+              color: #f1f1f1;
+              font-size: 19px;
+            }
+            P {
+              display: flex;
+              align-items: center;
+              color: #f1f1f1;
+              border: 1.5px solid rgba(255, 255, 255, 0.2);
+              border-radius: 12px;
+              padding: 6px;
+              margin: 4px;
+              font-size: 19px;
+            }
+          }
+
+          div.writer {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+
+            &::before {
+              display: flex;
+              align-items: center;
+              content: "Writer:";
+              color: #f1f1f1;
+              font-size: 19px;
+            }
+            P {
+              display: flex;
+              align-items: center;
+              color: #f1f1f1;
+              border: 1.5px solid rgba(255, 255, 255, 0.2);
+              border-radius: 12px;
+              padding: 6px;
+              margin: 4px;
+              font-size: 19px;
+            }
+          }
+
+          .filmGenres {
+            display: flex;
+            flex-direction: row;
+            &::before {
+              content: "Genres:";
+              display: flex;
+              align-items: center;
+              color: #f1f1f1;
+              font-size: 19px;
+            }
+            P {
+              display: flex;
+              align-items: center;
+              color: #f1f1f1;
+              border: 1.5px solid rgba(255, 255, 255, 0.2);
+              border-radius: 12px;
+              padding: 6px;
+              margin: 4px;
+              font-size: 19px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .buttons {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    button {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #fff5;
+      color: rgba(255, 255, 0, 0.534);
+      border: none;
+      font-family: monospace;
+      font-weight: bold;
+    }
+  }
+  .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    li {
+      list-style: none;
+      width: 10px;
+      height: 10px;
+      background-color: rgba(255, 255, 0, 0.758);
+      margin: 10px;
+      border-radius: 20px;
+      transition: 0.5s;
+
+      &.active {
+        width: 30px;
+      }
+    }
+  }
+}

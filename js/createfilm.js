@@ -51,6 +51,7 @@ function createFilm(event) {
     ? document.getElementById("genres")
     : false;
   let selectedGenres = [];
+  let selectedLangueages = [];
   let notCompleted = "";
   let maxID = 0;
   for (let i = 0; i < films.length; i++) {
@@ -67,6 +68,12 @@ function createFilm(event) {
   for (let i = 0; i < genresOpt.length; i++) {
     if (genresOpt[i].selected) {
       selectedGenres.push(genresOpt[i].value);
+    }
+  }
+
+  for (let i = 0; i < filmLanguage.length; i++) {
+    if (filmLanguage[i].selected) {
+      selectedLangueages.push(filmLanguage[i].value);
     }
   }
   if (
@@ -90,7 +97,7 @@ function createFilm(event) {
       genres: selectedGenres,
       director: filmDirector.value,
       writer: filmWriter.value,
-      language: filmLanguage.value,
+      language: selectedLangueages,
       plot: filmPlot.value,
       actors: selectedActors,
     };
@@ -119,11 +126,10 @@ function createFilm(event) {
     }
     alert(`${notCompleted} not completed !`);
   }
- 
 }
 function formGenresRender() {
+  let localGenres = JSON.parse(localStorage.getItem("genres") || "[]");
   let genres = document.getElementById("genres");
-  let localGenres = JSON.parse(localStorage.getItem("genres"));
   let x = ``;
   for (let i = 0; i < localGenres.length; i++) {
     x += `<option value="${localGenres[i].id}">${localGenres[i].genre}</option>`;
@@ -134,7 +140,6 @@ function formActorsRender() {
   let actors = JSON.parse(localStorage.getItem("Actors") || "[]");
   let formActors = document.getElementById("actors");
   let actorList = "";
-
   for (let i = 0; i < actors.length; i++) {
     actorList += `<option value="${actors[i].id}">${actors[i].actorsName} ${actors[i].actorsSurname}</option>`;
   }

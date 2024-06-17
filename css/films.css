@@ -3,167 +3,177 @@
   font-family: "Roboto", sans-serif;
 }
 
-main {
-  background-color: black;
-  width: 100%;
-  height: auto;
-  padding: 55.2px 0px 0px 0px;
-  background: url(https://cdn.cimri.io/image/240x240/muzi-mermer-siyah-fotograf-arka-plan-beyaz-ve-sari-granit-doku-fon-cocuk-dogum-gunu-partisi-fotograf-video-arka-planlari-15-x-21-m-xt-6731_750977098.jpg);
-  background-size: 100% 100%;
-  object-fit: cover;
-  display: flex;
-  min-height: 100vh;
+body {
+  background-color: #363636;
 
-  .films {
-    display: grid;
-    flex: 1;
-    align-items: flex-start;
-    grid-template-columns: 145px 145px 145px 145px 145px;
-    gap: 24px;
+  main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
     backdrop-filter: blur(520px);
-    justify-content: center;
-    padding: 32px;
-    a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      .createFilm {
-        display: flex;
+    padding: 0px 64px 64px 64px;
+    .films {
+      position: absolute;
+      left: 0;
+      right: 0;
+      background-color: #363636;
+      .filmsList {
+        display: grid;
+        flex: 1;
+        align-items: flex-start;
+        grid-template-columns: 145px 145px 145px 145px 145px;
+        gap: 24px;
         justify-content: center;
-        align-items: center;
-        background-color: aqua;
+        padding: 32px;
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          .createFilm {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+            background-color: rgb(37, 36, 36);
+            min-height: 288.4px;
+            width: 100%;
+            i {
+              font-size: 62px;
+              color: white;
+            }
+          }
+        }
+      }
+      .movieNotfound {
+        grid-column: 2/6;
+        color: #f1f1f1;
+        display: flex;
+        flex-direction: row;
+        gap: 18px;
+        border-bottom: 0.5px solid rgb(255, 255, 0);
+      }
+      .emptyFilmListTitle {
+        grid-column: 2/6;
+        color: #f1f1f1;
+        display: flex;
+        flex-direction: row;
+        gap: 18px;
+        border-bottom: 0.5px solid rgb(255, 255, 0);
+
+        i {
+          display: flex;
+          align-items: center;
+          font-size: 28px;
+        }
+
+        h1 {
+        }
+      }
+
+      .film {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
         background-color: rgb(37, 36, 36);
         min-height: 288.4px;
-        width: 100%;
-        i {
-          font-size: 62px;
-          color: white;
-        }
-      }
-    }
-
-    .movieNotfound {
-      grid-column: 2/6;
-      color: #f1f1f1;
-      display: flex;
-      flex-direction: row;
-      gap: 18px;
-      border-bottom: 0.5px solid rgb(255, 255, 0);
-    }
-    .emptyFilmListTitle {
-      grid-column: 2/6;
-      color: #f1f1f1;
-      display: flex;
-      flex-direction: row;
-      gap: 18px;
-      border-bottom: 0.5px solid rgb(255, 255, 0);
-
-      i {
-        display: flex;
-        align-items: center;
-        font-size: 28px;
-      }
-
-      h1 {
-      }
-    }
-
-    .film {
-      color: white;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      position: relative;
-      background-color: rgb(37, 36, 36);
-      min-height: 288.4px;
-      box-shadow: 2px 2px 4px black;
-      .bookMark {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        filter: opacity(70%);
-        z-index: 1;
-        i {
+        box-shadow: 2px 2px 4px black;
+        .bookMark {
           position: absolute;
-          color: white;
-          z-index: 3;
-          display: block;
-          font-size: 20px;
-        }
-        .layer2 {
-          position: absolute;
-          height: 40px;
-          width: 0px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          filter: opacity(70%);
+          z-index: 1;
+          i {
+            position: absolute;
+            color: white;
+            z-index: 3;
+            display: block;
+            font-size: 20px;
+          }
+          .layer2 {
+            position: absolute;
+            height: 40px;
+            width: 0px;
 
-          &.active {
-            border: 15px solid rgb(245, 197, 24, 1);
-            border-bottom: 7px solid transparent;
-            top: 0px;
+            &.active {
+              border: 15px solid rgb(245, 197, 24, 1);
+              border-bottom: 7px solid transparent;
+              top: 0px;
+            }
+
+            &.inactive {
+              border: 15px solid rgb(0, 0, 0);
+              border-bottom: 7px solid transparent;
+              top: 0px;
+            }
           }
 
-          &.inactive {
-            border: 15px solid rgb(0, 0, 0);
-            border-bottom: 7px solid transparent;
-            top: 0px;
-          }
-        }
-
-        .layer1 {
-          top: 2px;
-          position: relative;
-          height: 40px;
-          width: 0px;
-          border: 15px solid gray;
-          border-bottom: 7px solid transparent;
-        }
-
-        &:hover > .layer2 {
-          &.active {
-            border: 15px solid #dfb418;
-            border-bottom: 7px solid transparent;
-          }
-          &.inactive {
-            border: 15px solid rgb(77, 75, 75);
+          .layer1 {
+            top: 2px;
+            position: relative;
+            height: 40px;
+            width: 0px;
+            border: 15px solid gray;
             border-bottom: 7px solid transparent;
           }
-        }
-      }
 
-      a {
-        .photo {
-          height: 220px;
-          width: 100%;
-          background-color: gray;
-          object-fit: cover;
-          background-repeat: no-repeat !important;
-          background-size: cover !important;
-          background-position: center !important;
-
-          &:hover {
-            filter: brightness(92%);
+          &:hover > .layer2 {
+            &.active {
+              border: 15px solid #dfb418;
+              border-bottom: 7px solid transparent;
+            }
+            &.inactive {
+              border: 15px solid rgb(77, 75, 75);
+              border-bottom: 7px solid transparent;
+            }
           }
-          img {
+        }
+
+        a {
+          .photo {
+            height: 220px;
             width: 100%;
-            height: 100%;
+            background-color: gray;
             object-fit: cover;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+            background-position: center !important;
+
+            &:hover {
+              filter: brightness(92%);
+            }
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
           }
         }
-      }
-      .imdb {
-        display: flex;
-        gap: 5px;
-        margin-left: 6px;
-        i {
-          display: block;
-          height: 2px;
-          color: yellow;
+        .about {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          .imdb {
+            display: flex;
+            gap: 5px;
+            margin-left: 6px;
+            i {
+              display: block;
+              height: 2px;
+              color: yellow;
+            }
+          }
+          .name {
+            margin-left: 6px;
+            padding-bottom: 10px;
+          }
         }
-      }
-      .name {
-        margin-left: 6px;
-        padding-bottom: 10px;
       }
     }
   }

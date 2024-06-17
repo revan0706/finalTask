@@ -35,7 +35,7 @@ function watchListAdd(filmID) {
   let watchList = JSON.parse(localStorage.getItem("watchList") || "[]");
   watchList.push(filmID);
   localStorage.setItem("watchList", JSON.stringify(watchList));
-  if (location.pathname == "/index.html") {
+  if (location.pathname == "/index.html" || location.pathname == "/") {
     filmsRender();
   }
 
@@ -54,7 +54,7 @@ function watchListRemove(filmID) {
     }
   }
   localStorage.setItem("watchList", JSON.stringify(newList));
-  if (location.pathname == "/index.html") {
+  if (location.pathname == "/index.html" || location.pathname == "/") {
     filmsRender();
   }
   if (location.pathname == "/filmDetails.html") {

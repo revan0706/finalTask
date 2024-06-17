@@ -20,6 +20,29 @@ function editRender() {
       break;
     }
   }
+
+  for (let i = 0; i < genres.length; i++) {
+    for (let a = 0; a < foundFilm.genres.length; a++) {
+      if (genres[i].value == foundFilm.genres[a]) {
+        genres[i].selected = true;
+      }
+    }
+  }
+  for (let i = 0; i < languages.length; i++) {
+    for (let a = 0; a < foundFilm.language.length; a++) {
+      if (languages[i].value == foundFilm.language[a]) {
+        languages[i].selected = true;
+      }
+    }
+  }
+  for (let i = 0; i < actors.length; i++) {
+    for (let a = 0; a < foundFilm.actors.length; a++) {
+      if (actors[i].value == foundFilm.actors[a]) {
+        actors[i].selected = true;
+        console.log(actors[i]);
+      }
+    }
+  }
   title.value = foundFilm.title;
   imdb.value = foundFilm.IMDb;
   poster.value = foundFilm.poster;
@@ -28,9 +51,6 @@ function editRender() {
   duration.value = foundFilm.duration;
   director.value = foundFilm.director;
   writer.value = foundFilm.writer;
-  languages.value = foundFilm.languages;
-  genres.value = foundFilm.genres;
-  actors.value = foundFilm.actors;
   plot.value = foundFilm.plot;
 }
 
@@ -50,7 +70,25 @@ function editFilm(e) {
   let genres = document.getElementById("genres");
   let actors = document.getElementById("actors");
   let plot = document.getElementById("plot");
+  let selectedGenres = [];
+  let selectedActors = [];
+  let selectedLanguages = [];
+  for (let i = 0; i < genres.length; i++) {
+    if (genres[i].selected) {
+      selectedGenres.push(genres[i].value);
+    }
+  }
+  for (let i = 0; i < actors.length; i++) {
+    if (actors[i].selected) {
+      selectedActors.push(actors[i].value);
+    }
+  }
 
+  for (let i = 0; i < languages.length; i++) {
+    if (languages[i].selected) {
+      selectedLanguages.push(languages[i].value);
+    }
+  }
   for (let i = 0; i < films.length; i++) {
     if (films[i].id == hash) {
       films[i].title = title.value;
@@ -61,13 +99,12 @@ function editFilm(e) {
       films[i].duration = duration.value;
       films[i].director = director.value;
       films[i].writer = writer.value;
-      films[i].language = languages.value;
-      films[i].genres = genres.value;
-      films[i].actors = actors.value;
+      films[i].language = selectedLanguages;
+      films[i].genres = selectedGenres;
+      films[i].actors = selectedActors;
       films[i].plot = plot.value;
     }
   }
-  console.log(films);
   localStorage.setItem("Films", JSON.stringify(films));
   window.location.replace(`filmDetails.html#${hash}`);
 }

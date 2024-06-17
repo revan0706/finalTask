@@ -3,9 +3,9 @@ function filmDetailsRender() {
     let hash = Number(location.hash.slice(1, location.hash.length));
     let films = JSON.parse(localStorage.getItem("Films") || "[]");
     let foundFilm = null;
-    let actors = JSON.parse(localStorage.getItem("Actors"));
+    let actors = JSON.parse(localStorage.getItem("Actors") || "[]");
     let foundActors = "";
-    let genres = JSON.parse(localStorage.getItem("genres"));
+    let genres = JSON.parse(localStorage.getItem("genres") || "[]");
     let foundGenres = "";
 
     let watchList = JSON.parse(localStorage.getItem("watchList") || "[]");
@@ -103,5 +103,4 @@ function filmDetailsRender() {
     }
   }
 }
-filmDetailsRender()`<iframe width="560" height="315" src="https://www.youtube.com/embed/Rb0UmrCXxVA?si=vi6hoyLNFu6tL-Bw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
-`<iframe width="560" height="315" src="https://www.youtube.com/embed/-rRkmk10nIU?si=A9p_yg8Zl9j94a_9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+filmDetailsRender()
