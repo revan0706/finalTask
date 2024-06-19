@@ -10,9 +10,9 @@ function renderSearchBox() {
         .toLowerCase()
         .includes(searchInput.value.toLowerCase())
     ) {
-      if (addedFilmNumber < 3) {
+      if (addedFilmNumber < 4) {
         addedFilmNumber += 1;
-        films += ` <a href="filmDetails.html#${localFilms[i].id}"
+        films += `<a href="filmDetails.html#${localFilms[i].id}"
         ><div class="film">
           <div class="poster"><img src="${localFilms[i].poster}" alt="" /></div>
           <div class="about">
@@ -21,13 +21,13 @@ function renderSearchBox() {
           </div>
         </div></a
       >`;
+      }else if (addedFilmNumber >= 3) {
+        films += `<h1 onclick="searchFilms('input1')">Others</h1>`;
       }
     }
   }
 
-  if (addedFilmNumber == 3) {
-    films += `<h1 onclick="searchFilms('input1')">Others</h1>`;
-  }
+ 
   if (films == "") {
     films = ` <h1>Not found</h1>`;
   }

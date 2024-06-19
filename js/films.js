@@ -44,7 +44,6 @@ function searchFilms(input) {
       ? document.getElementsByClassName("searchInput")[0]
       : document.getElementsByClassName("searchInput")[1];
   let localFilms = JSON.parse(localStorage.getItem("Films") || "[]");
-  let films = document.getElementById("bigSearchBar");
   let wantedMovie = "";
   let searchBox = document.getElementById("searchBox");
   if (Boolean(searchInput.value.trim().length)) {
@@ -88,9 +87,19 @@ function searchFilms(input) {
         document.getElementById("filmsList").innerHTML = wantedMovie;
       }
     }
-    films.style.border = "1.3px solid transparent";
+    if (searchInput == document.getElementsByClassName("searchInput")[0]) {
+      searchInput.style.border = "1.3px solid transparent";
+    }
   } else {
-    films.style.border = "1.3px solid red";
+    if (searchInput == document.getElementsByClassName("searchInput")[0]) {
+      searchInput.style.border = "1.3px solid red";
+      filmsRender();
+    } else if (
+      searchInput == document.getElementsByClassName("searchInput")[1]
+
+    ) {
+      filmsRender();
+    }
   }
 
   if (searchBox.style.display == "flex") {

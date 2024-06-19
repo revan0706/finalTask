@@ -59,7 +59,6 @@ function createFilm(event) {
       maxID = films[i].id;
     }
   }
-  console.log(filmTitle);
   for (let i = 0; i < actorOpt.length; i++) {
     if (actorOpt[i].selected) {
       selectedActors.push(actorOpt[i].value);

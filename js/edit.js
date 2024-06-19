@@ -39,7 +39,6 @@ function editRender() {
     for (let a = 0; a < foundFilm.actors.length; a++) {
       if (actors[i].value == foundFilm.actors[a]) {
         actors[i].selected = true;
-        console.log(actors[i]);
       }
     }
   }

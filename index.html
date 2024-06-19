@@ -27,7 +27,7 @@
             id="bigSearchInput"
             placeholder="Search IMDb"
             class="searchInput"
-            onkeydown="renderSearchBox()"
+            onkeyup="renderSearchBox()"
           />
           <div class="searchBtn" onclick=" searchFilms('input1')">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -50,7 +50,7 @@
             name=""
             id="smallSearchInput"
             placeholder="Search IMDb"
-            onchange="searchFilms('input2')"
+            onkeyup="searchFilms('input2')"
             class="searchInput"
           />
         </div>
@@ -81,123 +81,12 @@
     <main>
       <div class="slider" id="filmsSlider">
         <div class="list" id="sliderFilmList">
-          <div class="item">
-            <div
-              class="sliderListItemPoster"
-              style="
-                background: url(https://m.media-amazon.com/images/M/MV5BMzgxMmQxZjQtNDdmMC00MjRlLTk1MDEtZDcwNTdmOTg0YzA2XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_.jpg)
-                  left center/100% 100% no-repeat !important;
-              "
-              id="sliderListItemPoster"
-            ></div>
-            <div class="sliderListItemAbout" id="sliderListItemAbout">
-              <div class="sliderListItemAboutHeadSection">
-                <h1 class="filmTitle">title</h1>
-                <div class="filmIMDb">7.7<i class="fa-solid fa-star"></i></div>
-              </div>
-              <p class="filmPlot">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Provident sit veritatis, quo labore nobis repudiandae quaerat ea
-                repellendus alias sapiente explicabo officia natus iste quas
-                eius, cum dolorem deleniti fugit?
-              </p>
-              <div class="sliderListItemAboutMiddleSection">
-                <div class="director">
-                  <p>Actor1</p>
-                </div>
-                <div class="writer">
-                  <p>writer1</p>
-                </div>
-                <div class="filmGenres">
-                  <p>action</p>
-                  <p>drama</p>
-                  <p>amazing</p>
-                  <p>comedi</p>
-                  <p>abc</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div
-              class="sliderListItemPoster"
-              style="
-                background: url(https://m.media-amazon.com/images/M/MV5BMzgxMmQxZjQtNDdmMC00MjRlLTk1MDEtZDcwNTdmOTg0YzA2XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_.jpg)
-                  left center/100% 100% no-repeat !important;
-              "
-              id="sliderListItemPoster"
-            ></div>
-            <div class="sliderListItemAbout" id="sliderListItemAbout">
-              <div class="sliderListItemAboutHeadSection">
-                <h1 class="filmTitle">title</h1>
-                <div class="filmIMDb">7.7<i class="fa-solid fa-star"></i></div>
-              </div>
-              <p class="filmPlot">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Provident sit veritatis, quo labore nobis repudiandae quaerat ea
-                repellendus alias sapiente explicabo officia natus iste quas
-                eius, cum dolorem deleniti fugit?
-              </p>
-              <div class="sliderListItemAboutMiddleSection">
-                <div class="director">
-                  <p>Actor1</p>
-                </div>
-                <div class="writer">
-                  <p>writer1</p>
-                </div>
-                <div class="filmGenres">
-                  <p>action</p>
-                  <p>drama</p>
-                  <p>amazing</p>
-                  <p>comedi</p>
-                  <p>abc</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div
-              class="sliderListItemPoster"
-              style="
-                background: url(https://m.media-amazon.com/images/M/MV5BMzgxMmQxZjQtNDdmMC00MjRlLTk1MDEtZDcwNTdmOTg0YzA2XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_.jpg)
-                  left center/100% 100% no-repeat !important;
-              "
-              id="sliderListItemPoster"
-            ></div>
-            <div class="sliderListItemAbout" id="sliderListItemAbout">
-              <div class="sliderListItemAboutHeadSection">
-                <h1 class="filmTitle">title</h1>
-                <div class="filmIMDb">7.7<i class="fa-solid fa-star"></i></div>
-              </div>
-              <p class="filmPlot">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Provident sit veritatis, quo labore nobis repudiandae quaerat ea
-                repellendus alias sapiente explicabo officia natus iste quas
-                eius, cum dolorem deleniti fugit?
-              </p>
-              <div class="sliderListItemAboutMiddleSection">
-                <div class="director">
-                  <p>Actor1</p>
-                </div>
-                <div class="writer">
-                  <p>writer1</p>
-                </div>
-                <div class="filmGenres">
-                  <p>action</p>
-                  <p>drama</p>
-                  <p>amazing</p>
-                  <p>comedi</p>
-                  <p>abc</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="item"></div>
         </div>
         <div class="buttons">
           <button id="prev"><</button>
           <button id="next">></button>
         </div>
-       
       </div>
       <div class="films" id="films">
         <div class="filmsList" id="filmsList"></div>

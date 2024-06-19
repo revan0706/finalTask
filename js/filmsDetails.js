@@ -31,7 +31,6 @@ function filmDetailsRender() {
       }
     }
     let filmSrc = String(foundFilm.src);
-    console.log(filmSrc);
     let filmSrcStart = filmSrc.indexOf("watch?v=") + 8;
     let filmSrcEnd =
       filmSrc.indexOf("&") == -1 ? filmSrc.length : filmSrc.indexOf("&");

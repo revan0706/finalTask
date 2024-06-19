@@ -19,6 +19,7 @@ body {
       left: 0;
       right: 0;
       background-color: #363636;
+      min-height: calc(100vh - 93.44px);
       .filmsList {
         display: grid;
         flex: 1;
@@ -26,7 +27,7 @@ body {
         grid-template-columns: 145px 145px 145px 145px 145px;
         gap: 24px;
         justify-content: center;
-        padding: 32px;
+        padding: 64px 32px 32px 32px;
         a {
           display: flex;
           justify-content: center;
