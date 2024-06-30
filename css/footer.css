@@ -15,7 +15,7 @@ footer {
         text-decoration: none;
         color: white;
         i {
-          font-size: 26px;
+          font-size: 22px;
         }
       }
     }
@@ -24,7 +24,7 @@ footer {
   .footerBottom {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 18px;
     flex-wrap: wrap;
     width: 60%;
     margin-bottom: 16px;
