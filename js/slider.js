@@ -54,6 +54,7 @@ function sliderRender() {
         }
       }
       if (i <= localFilms.length) {
+        let shortPlot = localFilms[i].plot.slice(0, 145);
         foundFilmList += ` <div class="item">
     <a href="filmDetails.html#${localFilms[i].id}"> <div
        class="sliderListItemPoster"
@@ -69,7 +70,7 @@ function sliderRender() {
          <div class="filmIMDb">${localFilms[i].IMDb}<i class="fa-solid fa-star"></i></div>
        </div>
        <p class="filmPlot">
-       ${localFilms[i].plot}
+       ${shortPlot}....
        </p>
        <div class="sliderListItemAboutMiddleSection">
          <div class="director">

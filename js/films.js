@@ -32,7 +32,7 @@ function filmsRender() {
      <div class="about"> <div class="imdb"><i class="fa-solid fa-star"></i>${
        films[i].IMDb
      }</div>
-      <div class="name">${films[i].title}</div> </div>
+      <span class="name">${films[i].title}</span> </div>
     </div>`;
   }
   document.getElementById("filmsList").innerHTML = x;
@@ -76,10 +76,10 @@ function searchFilms(input) {
             }"><div class="photo" style="background: url(${
           localFilms[i].poster
         });"></div></a>
-            <div class="imdb"><i class="fa-solid fa-star"></i>${
-              localFilms[i].IMDb
-            }</div>
-            <div class="name">${localFilms[i].title}</div>
+        <div class="about"> <div class="imdb"><i class="fa-solid fa-star"></i>${
+          localFilms[i].IMDb
+     }</div>
+      <div class="name">${localFilms[i].title}</div> </div>
           </div>`;
         if (wantedMovie == "") {
           wantedMovie = `<div class="emptyFilmListTitle"><h1>No movies, create one</h1></div>`;

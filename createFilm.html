@@ -26,11 +26,10 @@
             id="bigSearchInput"
             placeholder="Search IMDb"
             class="searchInput"
-            onchange="renderSearchBox()"
+            onkeyup="renderSearchBox()"
+            style="border-radius: 8px;"
           />
-          <div class="searchBtn" onclick=" searchFilms('input1')">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
+
           <div class="searchBox" id="searchBox"></div>
         </div>
         <div
@@ -79,7 +78,14 @@
     <div class="createFilm">
       <h1>Create Film</h1>
       <form action="" onsubmit="createFilm(event)" id="creatFilmForm">
-        <input type="text" name="" id="title" placeholder="Title" required />
+        <input
+          type="text"
+          name=""
+          id="title"
+          placeholder="Title"
+          required
+          maxlength="32"
+        />
         <input
           type="number"
           name=""
@@ -95,7 +101,13 @@
           placeholder="Poster (url)"
           required
         />
-        <input type="url" name="" id="src" placeholder="Trailer (url)" required />
+        <input
+          type="url"
+          name=""
+          id="src"
+          placeholder="Trailer (url)"
+          required
+        />
         <input type="month" name="" id="year" placeholder="Year" required />
         <input
           type="number"

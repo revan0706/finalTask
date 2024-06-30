@@ -53,4 +53,53 @@ function creatActors(e) {
   e.preventDefault();
 }
 
+function searchActors(input) {
+  let searchInput =
+    input == "input1"
+      ? document.getElementsByClassName("searchInput")[0]
+      : document.getElementsByClassName("searchInput")[1];
+  let localActors = JSON.parse(localStorage.getItem("Actors") || "[]");
+  let foundActors = "";
+  let actorsList = document.getElementById("actorList");
+  let searchBox = document.getElementById("searchBox");
+  if (Boolean(searchInput.value.trim().length)) {
+    for (let i = 0; i < localActors.length; i++) {
+      let foundActor =
+        localActors[i].actorsName + " " + localActors[i].actorsSurname;
+      if (
+        String(foundActor)
+          .toLowerCase()
+          .includes(String(searchInput.value).toLowerCase())
+      ) {
+        foundActors += `<div class="actor">
+        <div class="foto">
+          <img
+            src="${localActors[i].actorsImg}"
+            alt=""
+          />
+        </div>
+        <div class="about"><p>${localActors[i].actorsName} ${localActors[i].actorsSurname}</p></div>
+      </div>`;
+      }
+    }
+    if (searchInput == document.getElementsByClassName("searchInput")[0]) {
+      searchInput.style.border = "1.3px solid transparent";
+    }
+  } else {
+    if (searchInput == document.getElementsByClassName("searchInput")[0]) {
+      searchInput.style.border = "1.3px solid red";
+      actorsRender();
+    } else if (
+      searchInput == document.getElementsByClassName("searchInput")[1]
+    ) {
+      actorsRender();
+    }
+  }
+
+  actorsList.innerHTML = foundActors;
+  if (searchBox.style.display == "flex") {
+    searchBox.style.display = "none";
+  }
+}
+
 actorsRender();

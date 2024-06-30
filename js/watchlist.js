@@ -6,9 +6,9 @@ function watchListOpenClose() {
 
   if (watchList.style.visibility == "hidden") {
     watchList.style.visibility = "visible";
-    let open = setInterval(watchListOpenAnimation, 15);
+    let open = setInterval(watchListOpenAnimation, 5);
   } else {
-    let close = setInterval(watchListCloseAnimation, 15);
+    let close = setInterval(watchListCloseAnimation, 5);
     setTimeout(() => (watchList.style.visibility = "hidden"), 375);
   }
   function watchListCloseAnimation() {

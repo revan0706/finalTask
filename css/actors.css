@@ -5,6 +5,53 @@
 
 body {
   background: url(https://t3.ftcdn.net/jpg/01/15/03/38/360_F_115033825_CmHuh01QvB7T8btaOv0MK0WaKLZavdXx.jpg);
+  .searchBox {
+    /* display: none; */
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    gap: 10px;
+    padding: 16px 12px;
+    position: absolute;
+    top: 42.2px;
+
+    .actor {
+      display: flex;
+      height: 72px;
+      flex-direction: row;
+      padding: 5px;
+      gap: 10px;
+      border-bottom: 1px solid #b7b1b1;
+      .poster {
+        height: 100%;
+        width: 62px;
+        img {
+          height: 100%;
+          width: 100%;
+          border-radius: 6px;
+        }
+      }
+
+      .actorName {
+        padding: 5px 0px;
+        width: 87%;
+        font-size: 22px;
+        margin-left: 10px;
+        p {
+          margin: 0px;
+          margin-top: 5px;
+          max-lines: 1;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          line-clamp: 1;
+          -webkit-box-orient: vertical;
+        }
+      }
+    }
+  }
+
   main {
     padding: 58.13px 0px;
     width: 100%;

@@ -26,12 +26,26 @@
             id="bigSearchInput"
             placeholder="Search IMDb"
             class="searchInput"
-            onchange="renderSearchBox()"
+            onkeyup="renderSearchBox()"
           />
-          <div class="searchBtn" onclick=" searchFilms('input1')">
+          <div class="searchBtn" onclick=" searchActors('input1')">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
-          <div class="searchBox" id="searchBox"></div>
+          <div class="searchBox" id="searchBox">
+            <a href="">
+              <div class="actor">
+                <div class="poster">
+                  <img
+                    src="https://static1.purepeople.com/people/5/27/93/95/@/5049242-rami-malek-en-juin-2019-200x200-2.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="actorName">
+                  <p>Rami Malek</p>
+                </div>
+              </div></a
+            >
+          </div>
         </div>
         <div
           class="smallSearchBar"
@@ -49,7 +63,7 @@
             name=""
             id="smallSearchInput"
             placeholder="Search IMDb"
-            onchange="searchFilms('input2')"
+            onkeyup="searchActors('input2')"
             class="searchInput"
           />
         </div>
@@ -144,7 +158,6 @@
     </footer>
     <script src="js/actors.js"></script>
     <script src="js/searchBox.js"></script>
-    <script src="js/films.js"></script>
     <script src="js/smallSearchBar.js"></script>
     <script
       src="https://kit.fontawesome.com/c5f8229f0d.js"

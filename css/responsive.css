@@ -120,11 +120,11 @@
   .actorList {
     grid-template-columns: auto auto auto !important ;
     .actor {
-      width: 152px !important;
+      width: 140px !important;
       .foto {
-        width: 152px !important;
+        width: 140px !important;
         img {
-          height: 152px !important;
+          height: 140px !important;
         }
       }
     }
@@ -196,6 +196,15 @@
   }
   .actorList {
     grid-template-columns: auto auto auto !important ;
+    .actor {
+      width: 135px !important;
+      .foto {
+        width: 135px !important;
+        img {
+          height: 135px !important;
+        }
+      }
+    }
   }
 
   .createFilm {

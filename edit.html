@@ -19,19 +19,49 @@
           /></a>
         </div>
 
-        <div class="bigSearchBar">
+        <div class="bigSearchBar" id="bigSearchBar" style="display: flex">
           <input
             type="text"
             name=""
-            id="searchInput"
+            id="bigSearchInput"
             placeholder="Search IMDb"
+            class="searchInput"
+            style="border-radius: 8px;"
+            onkeyup="renderSearchBox()"
           />
-          <div class="searchBtn">
-            <i class="fa-solid fa-magnifying-glass"></i>
+       
+          <div class="searchBox" id="searchBox">
+            
           </div>
         </div>
-
+        <div
+          class="smallSearchBar"
+          id="smallSearchBar"
+          style="bottom: 60px; top: -60px; visibility: hidden"
+        >
+          <label
+            for="searchInput"
+            id="searchInputLabel"
+            onclick="smallSearchBarOpenClose()"
+            ><i class="fa-solid fa-x"></i
+          ></label>
+          <input
+            type="text"
+            name=""
+            id="smallSearchInput"
+            placeholder="Search IMDb"
+            onkeyup="searchFilms('input2')"
+            class="searchInput"
+          />
+        </div>
         <div class="verNavBar" id="navBar">
+          <a
+            class="searchBtn"
+            id="searchBtn"
+            onclick=" smallSearchBarOpenClose()"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
           <a href="actors.html">Actors</a>
           <a onclick="watchListOpenClose()" id="watchListBtn">Watchlist</a>
         </div>
@@ -50,7 +80,7 @@
     <div class="editFilm">
       <h1>Edit Film</h1>
       <form action="" onsubmit="editFilm(event)" id="creatFilmForm">
-        <input type="text" name="" id="title" placeholder="Title" required />
+        <input type="text" name="" id="title" placeholder="Title" required  maxlength="32" />
         <input
           type="number"
           name=""
@@ -58,6 +88,7 @@
           placeholder="IMDb"
           required
           step="0.1"
+
         />
         <input
           type="url"
@@ -122,6 +153,7 @@
     </footer>
     <script src="js/createfilm.js"></script>
     <script src="js/watchlist.js"></script>
+    <script src="js/searchBox.js"></script>
     <script src="js/edit.js"></script>
     <script
       src="https://kit.fontawesome.com/c5f8229f0d.js"

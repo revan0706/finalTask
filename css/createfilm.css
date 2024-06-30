@@ -45,6 +45,12 @@ body {
         &:focus-visible {
           outline: none;
         }
+
+        &[type="month"] {
+          &::-webkit-calendar-picker-indicator {
+            color-scheme: dark;
+          }
+        }
       }
 
       select {
